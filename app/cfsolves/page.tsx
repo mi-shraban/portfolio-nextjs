@@ -52,29 +52,30 @@ export default function CFPage() {
 				const data = await res.json()
 				if (data.status !== 'OK') throw new Error(data.comment || 'API error')
 
-				const seen = new Set<string>()
-				const lc: Record<string, number> = {}
-				const processed: Submission[] = []
-				for (const sub of data.result as any[]) {
-					const verdict = sub.verdict || 'UNKNOWN'
-					if (verdict !== 'OK') continue
-					const problem = sub.problem || {}
-					const name: string = problem.name || 'Unknown Problem'
-					if (seen.has(name)) continue
-					seen.add(name)
-					const language = getLanguage(sub.programmingLanguage)
-					lc[language] = (lc[language] || 0) + 1
-					processed.push({
-						sub_id: sub.id,
-						name,
-						id: `${problem.contestId || 'N/A'}${problem.index || '?'}`,
-						contestId: problem.contestId,
-						index: problem.index,
-						verdict,
-						language,
-						time: new Date(sub.creationTimeSeconds * 1000).toLocaleString()
-					})
-				}
+                const seen = new Set<string>()
+                const lc: Record<string, number> = {}
+                const processed: Submission[] = []
+                for (const sub of data.result as any[]) {
+                    const verdict = sub.verdict || 'UNKNOWN'
+                    if (verdict !== 'OK') continue
+                    const problem = sub.problem || {}
+                    const name: string = problem.name || 'Unknown Problem'
+                    const key = `${problem.contestId || 'N/A'}${problem.index || '?'}`
+                    if (seen.has(key)) continue
+                    seen.add(key)
+                    const language = getLanguage(sub.programmingLanguage)
+                    lc[language] = (lc[language] || 0) + 1
+                    processed.push({
+                        sub_id: sub.id,
+                        name,
+                        id: key,
+                        contestId: problem.contestId,
+                        index: problem.index,
+                        verdict,
+                        language,
+                        time: new Date(sub.creationTimeSeconds * 1000).toLocaleString()
+                    })
+                }
 				setSubs(processed)
 				setLangCount(lc)
 				setPage(1)
@@ -95,7 +96,7 @@ export default function CFPage() {
 
 	return (
 		<div className="cfWrap">
-			<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link" href={`https://codeforces.com/profile/${handle}`} target="_blank">[{handle}]</a></h2>
+			<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link" href={`https://codeforces.com/profile/${handle}`} target="_blank" rel="noopener noreferrer">[{handle}]</a></h2>
 			<div className="cfStats">
 				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center" }}>{subs.length}</div><div className="muted">Problems Solved</div></div>
 				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center" }}>{topLangs || 'N/A'}</div><div className="muted">Most Used Languages</div></div>
@@ -108,10 +109,10 @@ export default function CFPage() {
 					const solUrl = file ? `https://github.com/mi-shraban/cf_solves/blob/main/${file}` : ''
 					return (
 						<div key={s.sub_id} className="cfItem">
-							<div className="cfTitle">Problem: <a className="ab_link" target="_blank" href={problemUrl}>[{s.name}]</a></div>
+						<div className="cfTitle">Problem: <a className="ab_link" target="_blank" rel="noopener noreferrer" href={problemUrl}>[{s.name}]</a></div>
 							<div className="cfMeta">Language used: <b>{s.language}</b></div>
 							<div className="cfMeta">Submitted on: <b>{s.time}</b></div>
-							{solUrl && <div style={{ marginTop: 8 }}><a className="btn" href={solUrl} target="_blank">View my Solution</a></div>}
+							{solUrl && <div style={{ marginTop: 8 }}><a className="btn" href={solUrl} target="_blank" rel="noopener noreferrer">View my Solution</a></div>}
 						</div>
 					)
 				})}
