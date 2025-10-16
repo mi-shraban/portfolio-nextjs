@@ -1,8 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f835561f-7f2a-4e15-9c01-e2e766a99a53" name="Changes" comment="adding initial files">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/codeforces/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/codeforces/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cfsolves/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/cfsolves/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/robots.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/robots.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/AboutMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/AboutMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Education.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Experience.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ReachOut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ReachOut.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Research.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Research.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Skills.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mi-shraban&quot;
   }
 }</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mi-shraban/portfolio-nextjs.git&quot;,
+    &quot;accountId&quot;: &quot;2e7cf6b6-9e3c-45e6-a41e-e20027ea175a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="348qjGipXVQ81CCmUF3Cz4Bfapp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "ts.external.directory.path": "E:\\Project\\portfolio-nextjs\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f835561f-7f2a-4e15-9c01-e2e766a99a53" name="Changes" comment="" />
+      <created>1760605681076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760605681076</updated>
+      <workItem from="1760605682098" duration="1018000" />
+      <workItem from="1760606974501" duration="2171000" />
+    </task>
+    <task id="LOCAL-00001" summary="dropped files and changed structure">
+      <option name="closed" value="true" />
+      <created>1760605769606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760605769606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added gitignore">
+      <option name="closed" value="true" />
+      <created>1760605825281</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760605825281</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding initial files">
+      <option name="closed" value="true" />
+      <created>1760605854048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760605854048</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit. github page portfolio into nextjs" />
+    <MESSAGE value="dropped files and changed structure" />
+    <MESSAGE value="added gitignore" />
+    <MESSAGE value="adding initial files" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding initial files" />
+  </component>
 </project>
