@@ -74,6 +74,20 @@ export default function Sidebar() {
         }
     }, [])
 
+    // Lock body scroll when menu is open and close on Escape
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setMenuOpen(false)
+        }
+        document.addEventListener('keydown', onKey)
+        if (menuOpen) document.body.classList.add('no-scroll')
+        else document.body.classList.remove('no-scroll')
+        return () => {
+            document.removeEventListener('keydown', onKey)
+            document.body.classList.remove('no-scroll')
+        }
+    }, [menuOpen])
+
 	return (
 		<aside className="sidebar" ref={containerRef as any}>
             <div>
@@ -84,7 +98,7 @@ export default function Sidebar() {
                     <h2 className="name">MD. MONOWARUL ISLAM<br /><small>Computer Science Graduate</small></h2>
                 </div>
                 {/* Desktop nav stays as-is; hidden on mobile via CSS */}
-                <nav className={`nav`}>
+                <nav className={`nav`} role="navigation" aria-label="Section navigation">
                     {sections.map(s => (
                         <a key={s.id} href={`#${s.id}`}>{s.label}</a>
                     ))}
@@ -108,7 +122,7 @@ export default function Sidebar() {
                 <Image src={menuOpen ? crossSvg : burgerSvg} alt="menu" width={22} height={22} />
             </button>
             <div className={`mobileOverlay ${menuOpen ? 'show' : ''}`} onClick={() => setMenuOpen(false)} />
-            <nav id="mobileNav" className={`mobileNav ${menuOpen ? 'open' : ''}`}>
+            <nav id="mobileNav" className={`mobileNav ${menuOpen ? 'open' : ''}`} role="navigation" aria-label="Mobile section navigation">
                 {sections.map(s => (
                     <a key={s.id} href={`#${s.id}`} onClick={() => setMenuOpen(false)}>{s.label}</a>
                 ))}
