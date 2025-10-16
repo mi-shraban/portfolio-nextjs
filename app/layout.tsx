@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		'@type': 'Person',
 		name: 'Md. Monowarul Islam Shraban',
 		url: 'https://monowarulislam.vercel.app',
-		image: "https://mi-shraban.github.io/photos/profile.jpg",
+		image: profileJpg,
 		sameAs: [
 			'https://www.linkedin.com/in/md-monowarul-islam-b7657b341/',
 			'https://github.com/mi-shraban',
