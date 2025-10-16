@@ -1,5 +1,8 @@
 "use client"
+import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import topSvg from '../icons/scroll-to-top.svg'
 
 export default function ScrollToTop() {
 	const [show, setShow] = useState(false)
@@ -17,7 +20,7 @@ export default function ScrollToTop() {
 			aria-label="Scroll to top"
 			onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 		>
-			↑ Top
+			<Image src={topSvg} alt={'scrollToTop'} width={22} height={22}></Image>
 		</button>
 	)
 }
