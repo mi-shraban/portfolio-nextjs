@@ -18,18 +18,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Person',
-        name: 'Md. Monowarul Islam Shraban',
-        url: 'https://monowarulislam.vercel.app',
-        image: "https://mi-shraban.github.io/photos/profile.jpg",
-        sameAs: [
+        'name': 'Md. Monowarul Islam Shraban',
+        'url': 'https://monowarulislam.vercel.app',
+        'image': "https://mi-shraban.github.io/photos/profile.jpg",
+        'sameAs': [
             'https://www.linkedin.com/in/md-monowarul-islam-b7657b341/',
             'https://github.com/mi-shraban',
             'https://codeforces.com/profile/xordan.-'
         ],
-        studentOf: 'Brac University',
-        alumniOf: 'Brac University',
-        jobTitle: 'Computer Science Student',
-        worksFor: { '@type': 'Organization', name: 'Brac University' }
+        'alumniOf': 'Brac University',
+        'jobTitle': 'Computer Science Student',
+        'worksFor': { '@type': 'Organization', name: 'Brac University' }
     }
     return (
         <html lang="en">

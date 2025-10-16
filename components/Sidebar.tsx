@@ -81,7 +81,7 @@ export default function Sidebar() {
                     <div className="profilePic">
                         <Image src={profilePng} alt="Profile"/>
                     </div>
-                    <h2 className="name">MD. MONOWARUL ISLAM<br /><small>Computer Science Student</small></h2>
+                    <h2 className="name">MD. MONOWARUL ISLAM<br /><small>Computer Science Graduate</small></h2>
                 </div>
                 {/* Desktop nav stays as-is; hidden on mobile via CSS */}
                 <nav className={`nav`}>
