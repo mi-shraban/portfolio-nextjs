@@ -1,5 +1,4 @@
 import Sidebar from '@/components/Sidebar'
-import ScrollToTop from '@/components/ScrollToTop'
 import AboutMe from '@/components/sections/AboutMe'
 import Education from '@/components/sections/Education'
 import Skills from '@/components/sections/Skills'
@@ -21,7 +20,6 @@ export default function HomePage() {
                 <Experience />
                 <ReachOut />
             </main>
-            <ScrollToTop />
         </div>
     )
 }
