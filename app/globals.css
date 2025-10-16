@@ -82,6 +82,10 @@ a:hover { color: var(--primary-2); }
     font-size: 14px;
 }
 
+.ab_link{
+    font-weight: bold;
+}
+
 .nav {
     display: grid;
     gap: 8px;
