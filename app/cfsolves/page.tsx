@@ -97,9 +97,9 @@ export default function CFPage() {
 		<div className="cfWrap">
 			<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link" href={`https://codeforces.com/profile/${handle}`} target="_blank">[{handle}]</a></h2>
 			<div className="cfStats">
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22 }}>{subs.length}</div><div className="muted">Problems Solved</div></div>
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22 }}>{topLangs || 'N/A'}</div><div className="muted">Most Used Languages</div></div>
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22 }}>{Object.keys(langCount).length}</div><div className="muted">Languages Used</div></div>
+				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "Center" }}>{subs.length}</div><div className="muted">Problems Solved</div></div>
+				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "Center" }}>{topLangs || 'N/A'}</div><div className="muted">Most Used Languages</div></div>
+				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "Center"}}>{Object.keys(langCount).length}</div><div className="muted">Languages Used</div></div>
 			</div>
 			<div className="cfList">
 				{pageItems.map(s => {
