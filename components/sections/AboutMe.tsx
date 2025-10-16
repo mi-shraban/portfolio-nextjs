@@ -8,7 +8,7 @@ export default function AboutMe() {
                     <p>Hello there! This is Monowarul Islam, you can also call me Shraban. I am a Computer Science graduate
                         from <a href="https://bracu.ac.bd" className="ab_link" target="_blank">Brac University</a>, awaiting
                         conferral.I enjoy programming challenges, I have solved over <a className="ab_link" href="/cfsolves"
-                                                                                        target="_blank">250 problems on Codeforces</a>
+                                                                                        target="_blank">250 problems on Codeforces </a>
                         and more than <a href="https://leetcode.com/u/xordan77/" className="ab_link" target="_blank">150 problems on LeetCode</a>.
                         On the academic side, my research interests include data science, machine learning and deep
                         learning. I have also gained experience by working on a few projects which required me to study about Machine
@@ -23,10 +23,10 @@ export default function AboutMe() {
                         <br/>
                         On my free time, I enjoy playing video games, solving problems, watching movies, TV series and
                         anime. Some of my favorites are
-                        <a href="https://www.imdb.com/title/tt6161168/" target="_blank">Red Dead Redemption II</a>,
-                        <a href="https://www.imdb.com/title/tt0111161/" target="_blank">The Shawshank Redemption</a>,
-                        <a href="https://www.imdb.com/title/tt0903747/" target="_blank">Breaking Bad</a> and
-                        <a href="https://www.imdb.com/title/tt0434706/" target="_blank">Monster</a>.
+                        <a href="https://www.imdb.com/title/tt6161168/" target="_blank"> Red Dead Redemption II</a>,
+                        <a href="https://www.imdb.com/title/tt0111161/" target="_blank"> The Shawshank Redemption</a>,
+                        <a href="https://www.imdb.com/title/tt0903747/" target="_blank"> Breaking Bad</a> and
+                        <a href="https://www.imdb.com/title/tt0434706/" target="_blank"> Monster</a>.
                     </p>
                 </div>
         </section>

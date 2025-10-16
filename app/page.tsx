@@ -8,18 +8,18 @@ import Experience from '@/components/sections/Experience'
 import ReachOut from '@/components/sections/ReachOut'
 
 export default function HomePage() {
-	return (
-		<div className="shell">
-			<Sidebar />
-			<main className="main">
-				<AboutMe />
-				<Education />
-				<Skills />
-				<Projects />
-				<Research />
-				<Experience />
-				<ReachOut />
-			</main>
-		</div>
-	)
+    return (
+        <div className="shell">
+            <Sidebar />
+            <main className="main">
+                <AboutMe />
+                <Education />
+                <Skills />
+                <Projects />
+                <Research />
+                <Experience />
+                <ReachOut />
+            </main>
+        </div>
+    )
 }
