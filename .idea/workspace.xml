@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f835561f-7f2a-4e15-9c01-e2e766a99a53" name="Changes" comment="more navigation update for mobile version. scroll to top transparent.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1760605681076</updated>
       <workItem from="1760605682098" duration="1018000" />
-      <workItem from="1760606974501" duration="9304000" />
+      <workItem from="1760606974501" duration="9614000" />
     </task>
     <task id="LOCAL-00001" summary="dropped files and changed structure">
       <option name="closed" value="true" />

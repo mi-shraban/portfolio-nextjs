@@ -5,7 +5,7 @@ import profileJpg from '../photos/profile.jpg'
 export const metadata: Metadata = {
     title: 'Md. Monowarul Islam Shraban - Portfolio',
     description: "Monowarul Islam Shraban's portfolio of projects and research.",
-    metadataBase: new URL('https://mi-shraban.github.io'),
+    metadataBase: new URL('https://monowarulislam.vercel.app'),
     openGraph: {
         title: 'Monowarul Islam Shraban',
         description: 'Portfolio of Monowarul Islam Shraban.',
