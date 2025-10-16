@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f835561f-7f2a-4e15-9c01-e2e766a99a53" name="Changes" comment="nav menu from right, for mobile view">
+    <list default="true" id="f835561f-7f2a-4e15-9c01-e2e766a99a53" name="Changes" comment="more navigation update for mobile version. scroll to top transparent.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ScrollToTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ScrollToTop.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1760605681076</updated>
       <workItem from="1760605682098" duration="1018000" />
-      <workItem from="1760606974501" duration="8491000" />
+      <workItem from="1760606974501" duration="9304000" />
     </task>
     <task id="LOCAL-00001" summary="dropped files and changed structure">
       <option name="closed" value="true" />
@@ -111,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760614722131</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="more navigation update for mobile version. scroll to top transparent.">
+      <option name="closed" value="true" />
+      <created>1760615705394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760615705394</updated>
+    </task>
+    <task id="LOCAL-00007" summary="more navigation update for mobile version. scroll to top transparent.">
+      <option name="closed" value="true" />
+      <created>1760615747093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760615747093</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +139,7 @@
     <MESSAGE value="adding initial files" />
     <MESSAGE value="Slightly polished" />
     <MESSAGE value="nav menu from right, for mobile view" />
-    <option name="LAST_COMMIT_MESSAGE" value="nav menu from right, for mobile view" />
+    <MESSAGE value="more navigation update for mobile version. scroll to top transparent." />
+    <option name="LAST_COMMIT_MESSAGE" value="more navigation update for mobile version. scroll to top transparent." />
   </component>
 </project>
