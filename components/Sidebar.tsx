@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import profilePng from '../photos/profile.png'
-import profileJpg from '../photos/profile.jpg'
 import burgerSvg from '../icons/burger-menu.svg'
 import crossSvg from '../icons/cross.svg'
 import linkedinSvg from '../icons/linkedin-white.svg'
@@ -88,6 +87,20 @@ export default function Sidebar() {
         }
     }, [menuOpen])
 
+    // Unified handler for smooth scrolling to sections (desktop + mobile)
+    const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        // Ensure background can scroll before initiating smooth scroll
+        document.body.classList.remove('no-scroll')
+        setMenuOpen(false)
+        const el = document.getElementById(id)
+        if (el) {
+            // Smooth scroll into view and update URL hash without jump
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            history.pushState(null, '', `#${id}`)
+        }
+    }
+
 	return (
 		<aside className="sidebar" ref={containerRef as any}>
             <div>
@@ -100,7 +113,7 @@ export default function Sidebar() {
                 {/* Desktop nav stays as-is; hidden on mobile via CSS */}
                 <nav className={`nav`} role="navigation" aria-label="Section navigation">
                     {sections.map(s => (
-                        <a key={s.id} href={`#${s.id}`}>{s.label}</a>
+                        <a key={s.id} href={`#${s.id}`} onClick={handleNavClick(s.id)}>{s.label}</a>
                     ))}
                 </nav>
             </div>
@@ -124,7 +137,7 @@ export default function Sidebar() {
             <div className={`mobileOverlay ${menuOpen ? 'show' : ''}`} onClick={() => setMenuOpen(false)} />
             <nav id="mobileNav" className={`mobileNav ${menuOpen ? 'open' : ''}`} role="navigation" aria-label="Mobile section navigation">
                 {sections.map(s => (
-                    <a key={s.id} href={`#${s.id}`} onClick={() => setMenuOpen(false)}>{s.label}</a>
+                    <a key={s.id} href={`#${s.id}`} onClick={handleNavClick(s.id)}>{s.label}</a>
                 ))}
             </nav>
         </aside>
