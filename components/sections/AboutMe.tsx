@@ -1,4 +1,4 @@
-import resumePdf from '../../pdfs/CV_Md._Monowarul_Islam.pdf'
+const resumePdf = '/pdfs/CV_Md._Monowarul_Islam.pdf'
 
 export default function AboutMe() {
     return (

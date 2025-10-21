@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import profileJpg from '../photos/profile.jpg'
 
 export const metadata: Metadata = {
 	title: 'Md. Monowarul Islam Shraban - Portfolio',
@@ -14,13 +13,13 @@ export const metadata: Metadata = {
 	}
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-	const jsonLd = {
+	export default function RootLayout({ children }: { children: React.ReactNode }) {
+		const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
 		name: 'Md. Monowarul Islam Shraban',
 		url: 'https://monowarulislam.vercel.app',
-		image: profileJpg,
+		image: '/photos/profile.jpg',
 		sameAs: [
 			'https://www.linkedin.com/in/md-monowarul-islam-b7657b341/',
 			'https://github.com/mi-shraban',
