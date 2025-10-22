@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import React from "react";
 
 export default function Projects() {
 	return (
@@ -8,10 +9,11 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						<a className="ab_link" href="https://github.com/mi-shraban/Blood-Donation-Services"
+						Blood Donation Services
+						<a className="proj_link" href="https://github.com/mi-shraban/Blood-Donation-Services"
 						   target="_blank">
-							Blood Donation Services
-						</a>
+							Github Repo
+						</a> 🔗
 					</h3>
 					<ul>
 						<li>Tools: <i>HTML, CSS, Tailwind, PHP, MySql</i></li>
@@ -33,7 +35,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Blood-Donation-Services" target="_blank"
-						   rel="noopener noreferrer">🔗 Github Code Base</a>
+						   rel="noopener noreferrer">🔗 Github Repo</a>
 					</div>
 				</div>
 			</div>
@@ -41,9 +43,13 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						<a className="ab_link" href="https://github.com/mi-shraban/BloodAid" target="_blank">
-							Blood Aid
-						</a>
+						Blood Aid
+						<a className="proj_link" href="https://github.com/mi-shraban/BloodAid" target="_blank">
+							Github Repo
+						</a> 🔗
+						<a className="proj_link" href="https://bloodaid-2wfk.onrender.com/" target="_blank">
+							Live Demo
+						</a> 🔗
 					</h3>
 					<ul>
 						<li>Tools: <i>HTML, CSS, Tailwind, Python, Flask, SQLite</i></li>
@@ -72,11 +78,15 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						<a className="ab_link"
+						DSE Stock Closing Price Prediction
+						<a className="proj_link"
+						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/"
+						   target="_blank">Github Repo
+						</a>🔗
+						<a className="proj_link"
 						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
-						   target="_blank">
-							DSE Stock Closing Price Prediction
-						</a>
+						   target="_blank">EDA Notebook
+						</a>🔗
 					</h3>
 					<ul>
 						<li>Tools: <i> Python, NumPy, Pandas, Matplotlib, Scikit-Learn</i></li>
@@ -107,10 +117,11 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						<a className="ab_link" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
+						Exam Hall Monitoring System
+						<a className="proj_link" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
 						   target="_blank">
-							Exam Hall Monitoring System
-						</a>
+							Github Repo
+						</a> 🔗
 					</h3>
 					<ul>
 						<li>Tools: <i>Python, C++, Arduino, OpenCV, YOLOv3, CNN, ESP32-s3</i></li>
@@ -135,7 +146,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
-						   target="_blank" rel="noopener noreferrer">🔗 Github Code Base</a>
+						   target="_blank" rel="noopener noreferrer">🔗 Github Repo</a>
 					</div>
 				</div>
 			</div>
@@ -143,11 +154,15 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						<a className="ab_link"
+						Anomaly Detection in Network Traffic
+						<a className="proj_link"
+						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/"
+						   target="_blank">Github Repo
+						</a> 🔗
+						<a className="proj_link"
 						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
-						   target="_blank">
-							Anomaly Detection in Network Traffic
-						</a>
+						   target="_blank">EDA Notebook
+						</a> 🔗
 					</h3>
 					<ul>
 						<li>Tools: <i>Python, Pandas, Scikit-Learn, XGBoost, CatBoost, TensorFlow</i></li>
