@@ -198,7 +198,7 @@ export default function Projects() {
 						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
 						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
-				</div>q
+				</div>
 			</div>
 		</section>
 	)
