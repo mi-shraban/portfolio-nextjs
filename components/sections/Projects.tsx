@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import React from "react";
 
 export default function Projects() {
@@ -12,8 +12,9 @@ export default function Projects() {
 						Blood Donation Services
 						<a className="proj_link" href="https://github.com/mi-shraban/Blood-Donation-Services"
 						   target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
-						</a> 🔗
+						</a>
 					</h3>
 					<ul>
 						<li>Tools: <i>HTML, CSS, Tailwind, PHP, MySql</i></li>
@@ -35,7 +36,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Blood-Donation-Services" target="_blank"
-						   rel="noopener noreferrer">🔗 Github Repo</a>
+						   rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
 					</div>
 				</div>
 			</div>
@@ -45,11 +46,13 @@ export default function Projects() {
 					<h3>
 						Blood Aid
 						<a className="proj_link" href="https://github.com/mi-shraban/BloodAid" target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
-						</a> 🔗
+						</a>
 						<a className="proj_link" href="https://bloodaid-2wfk.onrender.com/" target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Live Demo
-						</a> 🔗
+						</a>
 					</h3>
 					<ul>
 						<li>Tools: <i>HTML, CSS, Tailwind, Python, Flask, SQLite</i></li>
@@ -70,7 +73,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://bloodaid-2wfk.onrender.com/" target="_blank"
-						   rel="noopener noreferrer">🔗 Live Demo</a>
+						   rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Live Demo</a>
 					</div>
 				</div>
 			</div>
@@ -80,13 +83,16 @@ export default function Projects() {
 					<h3>
 						DSE Stock Closing Price Prediction
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/"
-						   target="_blank">Github Repo
-						</a>🔗
+						   	href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/" target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							Github Repo
+						</a>
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
-						   target="_blank">EDA Notebook
-						</a>🔗
+						   	href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
+						   	target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							EDA Notebook
+						</a>
 					</h3>
 					<ul>
 						<li>Tools: <i> Python, NumPy, Pandas, Matplotlib, Scikit-Learn</i></li>
@@ -109,7 +115,7 @@ export default function Projects() {
 					<div className="thumbOverlay">
 						<a className="btn"
 						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
-						   target="_blank" rel="noopener noreferrer">🔗 Exploratory Data Analysis</a>
+						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
 				</div>
 			</div>
@@ -119,9 +125,10 @@ export default function Projects() {
 					<h3>
 						Exam Hall Monitoring System
 						<a className="proj_link" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
-						   target="_blank">
+						   	target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
-						</a> 🔗
+						</a>
 					</h3>
 					<ul>
 						<li>Tools: <i>Python, C++, Arduino, OpenCV, YOLOv3, CNN, ESP32-s3</i></li>
@@ -146,7 +153,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
-						   target="_blank" rel="noopener noreferrer">🔗 Github Repo</a>
+						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
 					</div>
 				</div>
 			</div>
@@ -156,13 +163,17 @@ export default function Projects() {
 					<h3>
 						Anomaly Detection in Network Traffic
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/"
-						   target="_blank">Github Repo
-						</a> 🔗
+						   	href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/"
+						   	target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							Github Repo
+						</a>
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
-						   target="_blank">EDA Notebook
-						</a> 🔗
+						   	href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
+						   	target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							EDA Notebook
+						</a>
 					</h3>
 					<ul>
 						<li>Tools: <i>Python, Pandas, Scikit-Learn, XGBoost, CatBoost, TensorFlow</i></li>
@@ -185,9 +196,9 @@ export default function Projects() {
 					<div className="thumbOverlay">
 						<a className="btn"
 						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
-						   target="_blank" rel="noopener noreferrer">🔗 Exploratory Data Analysis</a>
+						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
-				</div>
+				</div>q
 			</div>
 		</section>
 	)

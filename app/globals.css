@@ -320,6 +320,16 @@ h5 {
 
 }
 
+.link_icon {
+    font-size: 1em;
+    font-variant-emoji: text;
+    line-height: 1;
+    display: inline-block;
+    transform: rotate(-45deg);
+    transform-origin: 50% 55%;
+    vertical-align: -0.05em;
+}
+
 .projectImg:hover {
     transform: scale(1.02);
     box-shadow: 0 0 14px rgba(0,188,212,.28); }
