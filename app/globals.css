@@ -277,6 +277,7 @@ h5 { margin: 6px 0; }
 .projectThumb {
     flex-shrink: 0;
     width: 480px;
+    position: relative;
 }
 
 .projectImg {
@@ -291,6 +292,26 @@ h5 { margin: 6px 0; }
 .projectImg:hover {
     transform: scale(1.02);
     box-shadow: 0 0 14px rgba(0,188,212,.28); }
+
+/* Hover overlay for project thumbnails */
+.thumbOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.35);
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, box-shadow .15s ease;
+}
+
+.projectThumb:hover .thumbOverlay {
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0 0 18px rgba(0,188,212,.35), inset 0 0 12px rgba(0,188,212,.18);
+}
 
 @media (max-width: 1080px) {
     .shell { grid-template-columns: 1fr; padding: 16px; }
