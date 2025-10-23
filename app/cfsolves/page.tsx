@@ -120,11 +120,11 @@ export default function CFPage() {
 			<div className="cfPager">
 				{page > 1 && <button className="cfBtn" onClick={() => setPage(1)}>First</button>}
 				{page > 1 && <button className="cfBtn" onClick={() => setPage(p => Math.max(1, p - 1))}>«</button>}
-				{Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
+				{Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
 					// windowed buttons around current page
 					let start = Math.max(1, page - 3)
-					let end = Math.min(totalPages, start + 6)
-					if (end - start < 6) start = Math.max(1, end - 6)
+					let end = Math.min(totalPages, start + 4)
+					if (end - start < 4) start = Math.max(1, end - 4)
 					const n = start + i
 					if (n > end) return null
 					return (
