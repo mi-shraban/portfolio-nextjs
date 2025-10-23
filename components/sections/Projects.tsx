@@ -10,6 +10,7 @@ export default function Projects() {
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
 						Blood Donation Services
+						<br/>
 						<a className="proj_link" href="https://github.com/mi-shraban/Blood-Donation-Services"
 						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
@@ -49,6 +50,7 @@ export default function Projects() {
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
 						Blood Aid
+						<br/>
 						<a className="proj_link" href="https://github.com/mi-shraban/BloodAid" target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
@@ -90,14 +92,15 @@ export default function Projects() {
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
 						DSE Stock Closing Price Prediction
+						<br/>
 						<a className="proj_link"
-						   	href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/" target="_blank">
+						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/" target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
 						</a>
 						<a className="proj_link"
-						   	href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
-						   	target="_blank">
+						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
+						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							EDA Notebook
 						</a>
@@ -136,8 +139,9 @@ export default function Projects() {
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
 						Exam Hall Monitoring System
+						<br/>
 						<a className="proj_link" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
-						   	target="_blank">
+						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
 						</a>
@@ -178,15 +182,16 @@ export default function Projects() {
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
 						Anomaly Detection in Network Traffic
+						<br/>
 						<a className="proj_link"
-						   	href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/"
-						   	target="_blank">
+						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/"
+						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
 						</a>
 						<a className="proj_link"
-						   	href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
-						   	target="_blank">
+						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
+						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							EDA Notebook
 						</a>
