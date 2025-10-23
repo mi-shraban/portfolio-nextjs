@@ -322,6 +322,7 @@ h5 {
 
 .link_icon {
     font-size: 1em;
+    font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', sans-serif;
     font-variant-emoji: text;
     line-height: 1;
     display: inline-block;
