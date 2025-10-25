@@ -6,7 +6,7 @@ export async function GET(req: NextRequest) {
 	const { searchParams } = new URL(req.url)
 	const handle = searchParams.get('handle') || 'xordan.-'
 	const from = searchParams.get('from') || '1'
-	const count = searchParams.get('count') || '3000'
+	const count = searchParams.get('count') || '1500'
 
 	const apiUrl = `https://codeforces.com/api/user.status?handle=${encodeURIComponent(handle)}&from=${from}&count=${count}`
 

@@ -47,7 +47,7 @@ export default function CFPage() {
 			setLoading(true)
 			setError(null)
 			try {
-				const res = await fetch(`/api/codeforces?handle=${handle}&from=1&count=3000`)
+				const res = await fetch(`/api/codeforces?handle=${handle}&from=1&count=1500`)
 				if (!res.ok) throw new Error(`HTTP ${res.status}`)
 				const data = await res.json()
 				if (data.status !== 'OK') throw new Error(data.comment || 'API error')
