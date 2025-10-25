@@ -185,9 +185,9 @@ h5 {
 
 /* Glowing border animation */
 @keyframes glowPulse {
-    0% { box-shadow: 0 0 0px rgba(0,188,212,0.0), inset 0 0 0 rgba(0,188,212,0); }
+    0% { box-shadow: 0 0 0 rgba(0,188,212,0.0), inset 0 0 0 rgba(0,188,212,0); }
     50% { box-shadow: 0 0 16px rgba(0,188,212,0.35), inset 0 0 10px rgba(0,188,212,0.15); }
-    100% { box-shadow: 0 0 0px rgba(0,188,212,0.0), inset 0 0 0 rgba(0,188,212,0); }
+    100% { box-shadow: 0 0 0 rgba(0,188,212,0.0), inset 0 0 0 rgba(0,188,212,0); }
 }
 .card:hover { animation: glowPulse 1.5s ease-in-out infinite; }
 
