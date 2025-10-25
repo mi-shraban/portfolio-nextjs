@@ -1,5 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Space_Grotesk } from 'next/font/google'
+
+// Techy fonts: IBM Plex Sans for body, Orbitron for display/headings
+const bodyFont = Space_Grotesk({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    variable: '--font-sans'
+})
+
+const displayFont = Space_Grotesk({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-display'
+})
 
 export const metadata: Metadata = {
 	title: 'Md. Monowarul Islam Shraban - Portfolio',
@@ -30,12 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		worksFor: { '@type': 'Organization', name: 'Brac University' }
 	}
 	return (
-		<html lang="en">
+		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<link rel="preconnect" href="https://fonts.googleapis.com" />
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
@@ -43,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				}}
 			/>
 		</head>
-		<body>{children}</body>
+		<body className={bodyFont.className}>{children}</body>
 		</html>
 	)
 }
