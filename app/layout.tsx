@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 	title: 'Md. Monowarul Islam Shraban - Portfolio',
 	description: "Monowarul Islam Shraban's portfolio of projects and research.",
 	metadataBase: new URL('https://monowarulislam.vercel.app'),
+	icons: {
+		icon: '/icons/siteLogo.png',
+		shortcut: '/icons/siteLogo.png',
+		apple: '/icons/siteLogo.png'
+	},
 	openGraph: {
 		title: 'Monowarul Islam Shraban',
 		description: 'Portfolio of Monowarul Islam Shraban.',
