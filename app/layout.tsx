@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 	}
 }
 
-	export default function RootLayout({ children }: { children: React.ReactNode }) {
-		const jsonLd = {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
-		name: 'Md. Monowarul Islam Shraban',
+		name: 'Md. Monowarul Islam',
 		url: 'https://monowarulislam.vercel.app',
 		image: '/photos/profile.jpg',
 		sameAs: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 			'https://codeforces.com/profile/xordan.-'
 		],
 		alumniOf: 'Brac University',
-		jobTitle: 'Computer Science Student',
+		jobTitle: 'Computer Science Graduate',
 		worksFor: { '@type': 'Organization', name: 'Brac University' }
 	}
 	return (

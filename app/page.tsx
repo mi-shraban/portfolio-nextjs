@@ -7,6 +7,19 @@ import Research from '@/components/sections/Research'
 import Experience from '@/components/sections/Experience'
 import ReachOut from '@/components/sections/ReachOut'
 
+import type {Metadata} from "next";
+export const metadata: Metadata = {
+	title: 'Md. Monowarul Islam - Portfolio',
+	description: "Md. Monowarul Islam's Portfolio",
+	metadataBase: new URL('https://monowarulislam.vercel.app'),
+	openGraph: {
+		title: 'Md. Monowarul Islam',
+		description: 'Portfolio of Md. Monowarul Islam.',
+		type: 'website',
+		url: 'https://monowarulislam.vercel.app'
+	}
+};
+
 export default function HomePage() {
     return (
         <div className="shell">

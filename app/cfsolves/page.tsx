@@ -1,6 +1,19 @@
 "use client"
 import { useEffect, useMemo, useState } from 'react'
 
+import type {Metadata} from "next";
+export const metadata: Metadata = {
+	title: 'Md. Monowarul Islam Shraban - Codeforces Solves',
+	description: "All the programming problems solved by Monowarul Islam on Codeforces",
+	metadataBase: new URL('https://monowarulislam.vercel.app/cfsolves'),
+	openGraph: {
+		title: 'Monowarul Islam Shraban',
+		description: 'All the programming problems solved by Monowarul Islam on Codeforces',
+		type: 'webpage',
+		url: 'https://monowarulislam.vercel.app/cfsolves'
+	}
+};
+
 type Submission = {
 	sub_id: number
 	name: string
