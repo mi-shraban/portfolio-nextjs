@@ -18,13 +18,19 @@ export default function Skills() {
 				<h4>Web Development</h4>
 				<ul>
 					<li><b>Languages:</b> HTML, CSS, PHP, JavaScript</li>
-					<li><b>Frameworks:</b> Flask</li>
+					<li><b>Frameworks:</b> Flask, NextJS</li>
 				</ul>
 			</div>
 			<div className="card">
 				<h4>Databases</h4>
 				<ul>
 					<li>MySQL, SQLite</li>
+				</ul>
+			</div>
+			<div className="card">
+				<h4>AI Tools</h4>
+				<ul>
+					<li>GeminiCLI, OpenAI Codex, Llama</li>
 				</ul>
 			</div>
 			<div className="card">
