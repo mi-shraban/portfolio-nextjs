@@ -88,7 +88,14 @@ export default function CFPage() {
 		fetchData()
 	}, [])
 
-	if (loading) return <div className="cfWrap">Fetching submissions...</div>
+	// if (loading) return <div className="cfWrap">Fetching submissions...</div>
+	if (loading)
+  		return (
+			<div className="cfWrap">
+			  <div className="cfSpinner"></div>
+			</div>
+  		);
+	
 	if (error) return <div className="cfWrap">Error: {error}</div>
 
 	const sortedLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1])
