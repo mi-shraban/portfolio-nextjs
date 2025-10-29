@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 	publisher: 'Md. Monowarul Islam Shraban',
 	metadataBase: new URL('https://monowarulislam.vercel.app'),
 	alternates: {
-		canonical: 'https://mi-shraban.github.io'
+		canonical: 'https://monowarulislam.vercel.app'
 	},
 	icons: {
 		icon: '/icons/siteLogo.png',
