@@ -9,7 +9,8 @@ const sections = [
 	{ id: 'skills', label: 'Skills' },
 	{ id: 'projects', label: 'Projects' },
 	{ id: 'research', label: 'Research' },
-	{ id: 'experience', label: 'Experience' }
+	{ id: 'experience', label: 'Experience' },
+    { id: 'reachout', label: 'Reach Out' }
 ]
 
 export default function Sidebar() {

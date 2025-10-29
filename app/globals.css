@@ -249,7 +249,8 @@ h5 {
 }
 
 .cfItem {
-	background:#2c2c2c;
+	background: var(--panel);
+	/*background:#2c2c2c;*/
 	border-left:2px solid var(--primary-2);
 	border-bottom:2px solid var(--primary-2);
 	border-radius: 8px; padding: 12px;
