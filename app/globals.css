@@ -262,7 +262,7 @@ h5 {
 	padding: 18px;
 	margin: 14px 0;
 	position: relative;
-	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 	overflow: hidden;
 }
@@ -312,7 +312,7 @@ h5 {
 	background: var(--primary);
 	color: #000;
 	font-weight: 600;
-	transition: background 1s ease, transform 1s ease;
+	transition: background .5s ease, transform .5s ease;
 }
 
 .btn:hover {
@@ -361,10 +361,40 @@ h5 {
 
 .cfItem {
 	background: var(--panel);
-	/*background:#2c2c2c;*/
 	border-left:2px solid var(--primary-2);
 	border-bottom:2px solid var(--primary-2);
 	border-radius: 8px; padding: 12px;
+	position: relative;
+	transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+/* Shimmer effect on cfItem */
+.cfItem::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(0,188,212,0.15), transparent);
+	transition: left 1s ease;
+	pointer-events: none;
+}
+
+.cfItem:hover::before {
+	left: 100%;
+}
+
+/* Card hover state */
+.cfItem:hover {
+	/*transform: translateY(-6px);*/
+	box-shadow:
+		0 12px 24px rgba(0,188,212,0.25),
+		0 0 20px rgba(0,188,212,0.15),
+		inset 0 1px 0 rgba(255,255,255,0.1);
+	border-color: rgba(0,188,212,0.5);
 }
 
 .cfTitle {
