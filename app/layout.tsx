@@ -16,19 +16,65 @@ const displayFont = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-	title: 'Md. Monowarul Islam Shraban - Portfolio',
-	description: "Monowarul Islam Shraban's portfolio of projects and research.",
+	title: 'Md. Monowarul Islam - Portfolio',
+	description: "Md. Monowarul Islam's portfolio " +
+		"showcasing machine learning projects, web development, " +
+		"robotics, and 250+ Codeforces solutions. Computer Science " +
+		"graduate from Brac University specializing in cybersecurity " +
+		"and data science.",
+	keywords: [
+		'Md. Monowarul Islam',
+		'Monowarul Islam',
+		'Shraban',
+		'Monowarul Islam',
+		'Md Monowarul Islam',
+		'Computer Science Brac University',
+		'Codeforces xordan',
+		'Monowarul Islam Codeforces Solutions'
+	],
+	authors: [{
+		name: 'Md. Monowarul Islam',
+		url: 'https://monowarulislam.vercel.app'
+	}],
+	creator: 'Md. Monowarul Islam',
+	publisher: 'Md. Monowarul Islam',
 	metadataBase: new URL('https://monowarulislam.vercel.app'),
+	alternates: {
+		canonical: 'https://mi-shraban.github.io'
+	},
 	icons: {
 		icon: '/icons/siteLogo.png',
 		shortcut: '/icons/siteLogo.png',
 		apple: '/icons/siteLogo.png'
 	},
 	openGraph: {
-		title: 'Monowarul Islam Shraban',
-		description: 'Portfolio of Monowarul Islam Shraban.',
+		title: 'Md. Monowarul Islam - Portfolio',
+		description: 'Portfolio showcasing machine learning, web development, and 450+ programming challenge solutions. Specializing in cybersecurity and data science.',
 		type: 'website',
-		url: 'https://monowarulislam.vercel.app'
+		url: 'https://monowarulislam.vercel.app',
+		siteName: 'Monowarul Islam Portfolio',
+		images: [
+			{
+				url: '/photos/profile.png',
+				width: 1509,
+				height: 1509,
+				alt: 'Md. Monowarul Islam'
+			}
+		]
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1
+		}
+	},
+	verification: {
+		google: 'google-site-verification=P41IB63pI5bWa9KTFaUcG4ZKbPcbG3oQUeey_kYHZ3w'
 	}
 }
 
@@ -37,25 +83,74 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		'@context': 'https://schema.org',
 		'@type': 'Person',
 		name: 'Md. Monowarul Islam',
+		alternateName: ['Monowarul Islam', 'Shraban', 'Md Monowarul Islam'],
 		url: 'https://monowarulislam.vercel.app',
-		image: '/photos/profile.jpg',
+		image: 'https://monowarulislam.vercel.app/photos/profile.png',
+		description: 'Computer Science graduate from Brac University specializing in machine learning, cybersecurity, and competitive programming with 250+ Codeforces solutions.',
+		jobTitle: 'Computer Science Graduate',
+		alumniOf: {
+			'@type': 'Organization',
+			name: 'Brac University',
+			url: 'https://bracu.ac.bd'
+		},
+		knowsAbout: [
+			'Machine Learning',
+			'Deep Learning',
+			'Cybersecurity',
+			'Data Science',
+			'Python Programming',
+			'Web Development',
+			'Competitive Programming',
+			'Robotics'
+		],
 		sameAs: [
 			'https://www.linkedin.com/in/md-monowarul-islam-b7657b341/',
 			'https://github.com/mi-shraban',
-			'https://codeforces.com/profile/xordan.-'
+			'https://codeforces.com/profile/xordan.-',
+			'https://leetcode.com/u/xordan77/'
 		],
-		alumniOf: 'Brac University',
-		jobTitle: 'Computer Science Graduate',
-		worksFor: { '@type': 'Organization', name: 'Brac University' }
+		email: 'monowarul7ii@gmail.com',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Dhaka',
+			addressCountry: 'BD'
+		}
 	}
+	
+	const breadcrumbLd = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: 'https://monowarulislam.vercel.app'
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Codeforces Solutions',
+				item: 'https://monowarulislam.vercel.app/cfsolves'
+			}
+		]
+	}
+	
 	return (
 		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
 		<head>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<link rel="canonical" href="https://monowarulislam.vercel.app"/>
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(jsonLd)
+				}}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(breadcrumbLd)
 				}}
 			/>
 		</head>
