@@ -140,6 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<meta name="google-site-verification" content="jhRgtbXtNoO8Q3X38MQyIEEaubId3UR7xeEk57FiPMQ"/>
 			<link rel="canonical" href="https://monowarulislam.vercel.app"/>
 			<script
 				type="application/ld+json"
