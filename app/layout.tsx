@@ -16,28 +16,28 @@ const displayFont = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-	title: 'Md. Monowarul Islam - Portfolio',
-	description: "Md. Monowarul Islam's portfolio " +
+	title: 'Md. Monowarul Islam Shraban - Portfolio',
+	description: "Md. Monowarul Islam Shraban's portfolio " +
 		"showcasing machine learning projects, web development, " +
 		"robotics, and 250+ Codeforces solutions. Computer Science " +
 		"graduate from Brac University specializing in cybersecurity " +
 		"and data science.",
 	keywords: [
-		'Md. Monowarul Islam',
-		'Monowarul Islam',
+		'Md. Monowarul Islam Shraban',
+		'Monowarul Islam Shraban',
 		'Shraban',
 		'Monowarul Islam',
 		'Md Monowarul Islam',
 		'Computer Science Brac University',
 		'Codeforces xordan',
-		'Monowarul Islam Codeforces Solutions'
+		'Monowarul Islam Shraban Codeforces Solutions'
 	],
 	authors: [{
-		name: 'Md. Monowarul Islam',
+		name: 'Md. Monowarul Islam Shraban',
 		url: 'https://monowarulislam.vercel.app'
 	}],
-	creator: 'Md. Monowarul Islam',
-	publisher: 'Md. Monowarul Islam',
+	creator: 'Md. Monowarul Islam Shraban',
+	publisher: 'Md. Monowarul Islam Shraban',
 	metadataBase: new URL('https://monowarulislam.vercel.app'),
 	alternates: {
 		canonical: 'https://mi-shraban.github.io'
@@ -48,17 +48,17 @@ export const metadata: Metadata = {
 		apple: '/icons/siteLogo.png'
 	},
 	openGraph: {
-		title: 'Md. Monowarul Islam - Portfolio',
+		title: 'Md. Monowarul Islam Shraban - Portfolio',
 		description: 'Portfolio showcasing machine learning, web development, and 450+ programming challenge solutions. Specializing in cybersecurity and data science.',
 		type: 'website',
 		url: 'https://monowarulislam.vercel.app',
-		siteName: 'Monowarul Islam Portfolio',
+		siteName: 'Monowarul Islam Shraban Portfolio',
 		images: [
 			{
 				url: '/photos/profile.png',
 				width: 1509,
 				height: 1509,
-				alt: 'Md. Monowarul Islam'
+				alt: 'Md. Monowarul Islam Shraban'
 			}
 		]
 	},
@@ -82,8 +82,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
-		name: 'Md. Monowarul Islam',
-		alternateName: ['Monowarul Islam', 'Shraban', 'Md Monowarul Islam'],
+		name: 'Md. Monowarul Islam Shraban',
+		alternateName: ['Monowarul Islam Shraban', 'Shraban', 'Md Monowarul Islam Shraban'],
 		url: 'https://monowarulislam.vercel.app',
 		image: 'https://monowarulislam.vercel.app/photos/profile.png',
 		description: 'Computer Science graduate from Brac University specializing in machine learning, cybersecurity, and competitive programming with 250+ Codeforces solutions.',
