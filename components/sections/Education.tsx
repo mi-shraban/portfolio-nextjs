@@ -19,7 +19,7 @@ export default function Education() {
                   </ul>
                   <h4><b>Secondary School Certificate</b></h4>
                   <ul>
-                      <li>2013 - 2018</li>
+                      <li>2016 - 2018</li>
                       <li>GPA: 5.00 out of 5</li>
                   </ul>
               </div>
