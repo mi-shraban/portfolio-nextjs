@@ -13,7 +13,7 @@ type Submission = {
 }
 
 const handle = 'xordan.-'
-const pageSize = 40
+const pageSize = 14
 
 function getLanguage(lang?: string) {
 	const lower = (lang || '').toLowerCase()
@@ -108,16 +108,10 @@ export default function CFPage() {
 	return (
 		<>
 			<div className="cfWrap">
-				<h2 className="cfHeader">
-					Codeforces Submissions of <span> </span>
-					<a className="as_link"
-					   href={`https://codeforces.com/profile/${handle}`}
-					   target="_blank"
-					   rel="noopener noreferrer"
-					>
-						[{handle}]
-					</a>
-				</h2>
+				<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link"
+																	  href={`https://codeforces.com/profile/${handle}`}
+																	  target="_blank"
+																	  rel="noopener noreferrer">[{handle}]</a></h2>
 				<div className="cfStats" style={{columnGap: '10px', alignItems: 'center'}}>
 					<div>
 						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>

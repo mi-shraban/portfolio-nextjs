@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
 
 const sections = [
 	{ id: 'aboutme', label: 'About Me' },
@@ -14,12 +13,10 @@ const sections = [
     { id: 'reachout', label: 'Reach Out' }
 ]
 
-const Sidebar = () => {
+export default function Sidebar() {
     const containerRef = useRef<HTMLElement | null>(null)
     const hoverLockRef = useRef<boolean>(false)
     const [menuOpen, setMenuOpen] = useState(false)
-	const router = useRouter()
-	const pathname = usePathname()
 
     useEffect(() => {
         const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav a'))
@@ -68,7 +65,7 @@ const Sidebar = () => {
             enterHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseenter', fn))
             leaveHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseleave', fn))
         }
-    }, [pathname])
+    }, [])
 
     // Lock body scroll when menu is open and close on Escape
     useEffect(() => {
@@ -90,17 +87,12 @@ const Sidebar = () => {
         // Ensure background can scroll before initiating smooth scroll
         document.body.classList.remove('no-scroll')
         setMenuOpen(false)
-
-		if (pathname === '/') {
-			const el = document.getElementById(id)
-			if (el) {
-				// Smooth scroll into view and update URL hash without jump
-				el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-				history.pushState(null, '', `#${id}`)
-			}
-		} else {
-			router.push(`/#${id}`)
-		}
+        const el = document.getElementById(id)
+        if (el) {
+            // Smooth scroll into view and update URL hash without jump
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            history.pushState(null, '', `#${id}`)
+        }
     }
 
 	return (
@@ -145,5 +137,3 @@ const Sidebar = () => {
         </aside>
     )
 }
-
-export default Sidebar
