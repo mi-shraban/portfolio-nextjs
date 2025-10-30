@@ -166,6 +166,7 @@ a {
 
 .socials {
 	display:flex;
+	align-content: flex-end;
 	justify-content:center;
 	gap: 12px;
 	padding-top: 12px;
@@ -565,13 +566,16 @@ h5 {
 		z-index: 95;
 	}
 	/* Hide desktop nav on mobile */
-	.nav { display: none; }
+	.nav {
+		display: none;
+	}
 	/* Mobile slide-out drawer */
 	.mobileNav {
-		display: grid;
-		gap: 2px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
 		justify-items: end;
-		align-items: start;        /* prevent item stretch vertically */
+		align-items: end;        /* prevent item stretch vertically */
 		align-content: start;      /* prevent tracks filling container */
 		grid-auto-rows: max-content; /* rows sized to content */
 		position: fixed;
@@ -580,7 +584,7 @@ h5 {
 		height: 100vh;
 		width: 78vw;
 		max-width: 320px;
-		padding: 72px 12px 12px; /* leave space for fixed button */
+		padding: 72px 12px 72px 12px; /* leave space for fixed button */
 		background: rgba(30,30,30,0.7);
 		border-left: 1px solid var(--primary);
 		box-shadow: none; /* no glow while closed */
@@ -589,10 +593,34 @@ h5 {
 		z-index: 90;
 		overflow-y: auto;
 	}
+
+	.mobileNav .nav-bottom {
+	    margin-top: auto;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: end;
+	    gap: 16px;
+	}
+
+	.mobileNav .socials {
+	    display: flex;
+	    justify-content: center;
+	    margin-top: 0;
+	    padding-top: 0;
+	    gap: 12px;
+	}
+
+	.mobileNav .btn {
+		border: none;
+		background: linear-gradient(90deg, var(--primary) 60%, var(--darkeraccent));
+		color: black;
+	}
+
 	.mobileNav.open {
 		transform: translateX(0);
 		box-shadow: -4px 0 18px rgba(0,188,212,0.24); /* glow only when open */
 	}
+
 	.mobileNav a {
 		text-align: right;
 		padding: 10px 10px 10px 10px;
@@ -603,13 +631,6 @@ h5 {
 		gap: 5px;
 		transition: background .2s ease, color .2s ease, box-shadow .3s ease;
 	}
-	.mobileNav a:hover {
-		background: var(--primary);
-		color: var(--bg);
-		box-shadow: 0 0 12px rgba(0,188,212,.3);
-	}
-
-	/* Removed internal close button; hamburger toggles */
 
 	/* Mobile overlay */
 	.mobileOverlay {
@@ -622,6 +643,7 @@ h5 {
 		z-index: 88;
 		pointer-events: none;
 	}
+
 	.mobileOverlay.show {
 		opacity: 1;
 		pointer-events: auto;
