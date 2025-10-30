@@ -333,7 +333,9 @@ h5 {
 
 /* CF page */
 .cfWrap {
-	max-width: 1100px; margin: 0 auto; padding: 24px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 24px;
 }
 
 .cfHeader {
@@ -410,21 +412,24 @@ h5 {
 }
 
 .cfPager {
-	display:flex;
-	gap:8px;
-	flex-wrap:wrap;
-	margin-top:18px;
+	background: var(--bg);
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px 16px;
 }
 
 .cfBtn {
 	background: var(--primary);
 	color: #000;
-	border:1px solid #fff;
+	border:2px solid var(--darkeraccent);
 	border-radius: 6px;
 	padding: 6px 10px;
 }
 
 .cfBtn.active {
+	background: #79AEC8;
 	border-width:2px;
 	font-weight:700;
 	color:#000;

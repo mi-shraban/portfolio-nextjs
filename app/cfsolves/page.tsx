@@ -48,9 +48,11 @@ export default function CFPage() {
 			setError(null)
 			try {
 				const res = await fetch(`/api/codeforces?handle=${handle}&from=1&count=1000`)
-				if (!res.ok) throw new Error(`HTTP ${res.status}`)
+				if (!res.ok)
+					throw new Error(`HTTP ${res.status}`)
 				const data = await res.json()
-				if (data.status !== 'OK') throw new Error(data.comment || 'API error')
+				if (data.status !== 'OK')
+					throw new Error(data.comment || 'API error')
 
                 const seen = new Set<string>()
                 const lc: Record<string, number> = {}
@@ -98,49 +100,88 @@ export default function CFPage() {
 	
 	if (error) return <div className="cfWrap">Error: {error}</div>
 
-	const sortedLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1])
-	const topLangs = sortedLangs.slice(0, 2).map(([k]) => k).join(', ')
+	const sortedLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
+	const topLangs = sortedLangs.slice(0, 2).map(([k]) => k).join(', ');
+	const front = '>';
+	const back = '<';
 
 	return (
-		<div className="cfWrap">
-			<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link" href={`https://codeforces.com/profile/${handle}`} target="_blank" rel="noopener noreferrer">[{handle}]</a></h2>
-			<div className="cfStats">
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center" }}>{subs.length}</div><div className="muted">Problems Solved</div></div>
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center" }}>{topLangs || 'N/A'}</div><div className="muted">Most Used Languages</div></div>
-				<div><div style={{ color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>{Object.keys(langCount).length}</div><div className="muted">Languages Used</div></div>
-			</div>
-			<div className="cfList">
-				{pageItems.map(s => {
-					const problemUrl = (s.contestId && s.index) ? `https://codeforces.com/contest/${s.contestId}/problem/${s.index}` : '#'
-					const file = getFileName(s.language, s.id)
-					const solUrl = file ? `https://github.com/mi-shraban/cf_solves/blob/main/${file}` : ''
-					return (
-						<div key={s.sub_id} className="cfItem">
-						<div className="cfTitle">Problem: <a className="ab_link" target="_blank" rel="noopener noreferrer" href={problemUrl}>[{s.name}]</a></div>
-							<div className="cfMeta">Language used: <b>{s.language}</b></div>
-							<div className="cfMeta">Submitted on: <b>{s.time}</b></div>
-							{solUrl && <div style={{ marginTop: 8 }}><a className="btn" href={solUrl} target="_blank" rel="noopener noreferrer">View my Solution</a></div>}
+		<>
+			<div className="cfWrap">
+				<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link"
+																	  href={`https://codeforces.com/profile/${handle}`}
+																	  target="_blank"
+																	  rel="noopener noreferrer">[{handle}]</a></h2>
+				<div className="cfStats" style={{columnGap: '10px', alignItems: 'center'}}>
+					<div>
+						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>
+							{subs.length}
 						</div>
-					)
-				})}
+						<div className="muted" style={{textAlign: "center"}}>
+							Problems Solved
+						</div>
+					</div>
+					<div>
+						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>
+							{topLangs || 'N/A'}
+						</div>
+						<div className="muted" style={{textAlign: "center"}}>
+							Most Used Languages
+						</div>
+					</div>
+					<div>
+						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>
+							{Object.keys(langCount).length}
+						</div>
+						<div className="muted" style={{textAlign: "center"}}>
+							Languages Used
+						</div>
+					</div>
+				</div>
+				<div className="cfList">
+				{pageItems.map(s => {
+						const problemUrl = (s.contestId && s.index) ? `https://codeforces.com/contest/${s.contestId}/problem/${s.index}` : '#'
+						const file = getFileName(s.language, s.id)
+						const solUrl = file ? `https://github.com/mi-shraban/cf_solves/blob/main/${file}` : ''
+						return (
+							<div key={s.sub_id} className="cfItem">
+								<div className="cfTitle">Problem: <a className="ab_link" target="_blank"
+																	 rel="noopener noreferrer" href={problemUrl}>
+									[{s.name}]</a>
+								</div>
+								<div className="cfMeta">
+									Language used: <b>{s.language}</b>
+								</div>
+								<div className="cfMeta">
+									Submitted on: <b>{s.time}</b>
+								</div>
+								{solUrl && <div style={{marginTop: 8}}><a className="btn" href={solUrl} target="_blank"
+																		  rel="noopener noreferrer">View my Solution</a>
+								</div>}
+							</div>
+						)
+					})}
+				</div>
 			</div>
 			<div className="cfPager">
 				{page > 1 && <button className="cfBtn" onClick={() => setPage(1)}>First</button>}
-				{page > 1 && <button className="cfBtn" onClick={() => setPage(p => Math.max(1, p - 1))}>«</button>}
-				{Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+				{page > 1 && <button className="cfBtn" onClick={() => setPage(p => Math.max(1, p - 1))}>{back}</button>}
+				{Array.from({length: Math.min(3, totalPages)}, (_, i) => {
 					// windowed buttons around current page
-					let start = Math.max(1, page - 3)
-					let end = Math.min(totalPages, start + 4)
-					if (end - start < 4) start = Math.max(1, end - 4)
+					let start = Math.max(1, page - 1)
+					let end = Math.min(totalPages, start + 3)
+					if (end - start < 3) start = Math.max(1, end - 3)
 					const n = start + i
 					if (n > end) return null
 					return (
-						<button key={n} className={`cfBtn ${n === page ? 'active' : ''}`} onClick={() => setPage(n)}>{n}</button>
+						<button key={n} className={`cfBtn ${n === page ? 'active' : ''}`}
+								onClick={() => setPage(n)}>{n}</button>
 					)
 				})}
-				{page < totalPages && <button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>»</button>}
+				{page < totalPages &&
+					<button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>{front}</button>}
 				{page < totalPages && <button className="cfBtn" onClick={() => setPage(totalPages)}>Last</button>}
 			</div>
-		</div>
+		</>
 	)
 }
