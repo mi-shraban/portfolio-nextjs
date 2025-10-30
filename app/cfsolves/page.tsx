@@ -13,7 +13,7 @@ type Submission = {
 }
 
 const handle = 'xordan.-'
-const pageSize = 14
+const pageSize = 40
 
 function getLanguage(lang?: string) {
 	const lower = (lang || '').toLowerCase()
