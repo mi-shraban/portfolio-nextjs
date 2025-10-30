@@ -1,4 +1,5 @@
 import './globals.css'
+import Sidebar from '@/components/Sidebar'
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 
@@ -155,7 +156,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				}}
 			/>
 		</head>
-		<body className={bodyFont.className}>{children}</body>
+		<body className={bodyFont.className}>
+			<div className="container">
+				<Sidebar/>
+				<main className="content">
+					{children}
+				</main>
+			</div>
+		</body>
 		</html>
 	)
 }

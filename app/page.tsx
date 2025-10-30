@@ -1,4 +1,3 @@
-import Sidebar from '@/components/Sidebar'
 import AboutMe from '@/components/sections/AboutMe'
 import Education from '@/components/sections/Education'
 import Skills from '@/components/sections/Skills'
@@ -20,19 +19,18 @@ export const metadata: Metadata = {
 	}
 };
 
-export default function HomePage() {
+const HomePage =() => {
     return (
-        <div className="shell">
-            <Sidebar />
-            <main className="main">
-                <AboutMe />
-                <Education />
-                <Skills />
-                <Projects />
-                <Research />
-                <Experience />
-                <ReachOut />
-            </main>
-        </div>
+        <>
+            <AboutMe />
+            <Education />
+            <Skills />
+            <Projects />
+            <Research />
+            <Experience />
+            <ReachOut />
+        </>
     )
 }
+
+export default HomePage
