@@ -630,9 +630,18 @@ h5 {
 		            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 	}
 
+	.profilePic {
+		width: 250px;
+		height: 250px;
+	}
+
 	.mobileNavbar .profilePic {
+		width: 64px;
+		height: 64px;
 		border: 2px solid var(--primary);
 	}
+
+
 
 	.mobileNavbar.visible {
 		top: 15px;

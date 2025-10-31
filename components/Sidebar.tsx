@@ -108,7 +108,7 @@ export default function Sidebar(){
 				<div>
 					<div className="profile">
 						<div className="profilePic">
-							<Image src="/photos/profile.png" alt="Profile" width={1509} height={1509} />
+							<Image src="/photos/profile.png" alt="Profile" width={512} height={512} />
 						</div>
 						<h2 className="name">
 							MD. MONOWARUL ISLAM

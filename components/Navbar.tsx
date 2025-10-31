@@ -63,7 +63,7 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 			<div className={`mobileNavbar ${showMobileNavbar ? 'visible' : ''}`}>
 				<div className="profile">
 					<div className="profilePic">
-						<Image src="/photos/profile.png" alt="Profile" width={64} height={64}/>
+						<Image src="/photos/profile.png" alt="Profile" width={512} height={512}/>
 					</div>
 				</div>
 				<span className="mobileNavbarName">MD. MONOWARUL ISLAM</span>
