@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
+import Sidebar from "@/components/Sidebar";
 
 // Techy fonts: IBM Plex Sans for body, Orbitron for display/headings
 const bodyFont = Space_Grotesk({
@@ -155,7 +156,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				}}
 			/>
 		</head>
-		<body className={bodyFont.className}>{children}</body>
+		<body className={bodyFont.className}>
+			{/*<Sidebar />*/}
+			{children}
+		</body>
 		</html>
 	)
 }
