@@ -641,8 +641,6 @@ h5 {
 		border: 2px solid var(--primary);
 	}
 
-
-
 	.mobileNavbar.visible {
 		top: 15px;
 		opacity: 1;
@@ -669,7 +667,7 @@ h5 {
 		gap: 8px;
 		align-items: stretch;
 		position: fixed;
-		top: 75px; /* Just below the navbar island */
+		top: 85px; /* Just below the navbar island */
 		left: 15px;
 		right: 15px;
 		max-height: calc(100vh - 75px); /* Leave space at bottom */
@@ -678,7 +676,7 @@ h5 {
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border: 1px solid var(--primary);
-		border-radius: 16px;
+		border-radius: 0 0 12px 12px;
 		box-shadow: 0 8px 32px rgba(0,188,212,.4);
 		transform: translateY(-20px);
 		opacity: 0;
@@ -686,6 +684,12 @@ h5 {
 		transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1), opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
 		z-index: 90;
 		overflow-y: auto;
+	}
+
+	.mobileNav.open {
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	.mobileNav .nav-bottom {
@@ -715,11 +719,7 @@ h5 {
 		color: black;
 	}
 
-	.mobileNav.open {
-		transform: translateY(0);
-		opacity: 1;
-		pointer-events: auto;
-	}
+
 
 	.mobileNav a {
 		text-align: center;

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import {usePathname, useRouter} from "next/navigation";
 
 const sections = [
+	{id: 'home', label: 'Home'},
 	{ id: 'aboutme', label: 'About Me' },
 	{ id: 'education', label: 'Education' },
 	{ id: 'skills', label: 'Skills' },
@@ -44,6 +45,16 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
         // Ensure background can scroll before initiating smooth scroll
         document.body.classList.remove('no-scroll')
         setMenuOpen(false)
+		
+		if (id === 'home') {
+			if (pathname === '/') {
+				window.scrollTo({ top: 0, behavior: 'smooth' })
+			} else {
+				window.scrollTo({ top: 0, behavior: 'smooth' })
+				router.push('/')
+			}
+			return
+		}
 
 		if (pathname === '/') {
 			const el = document.getElementById(id)
@@ -56,18 +67,12 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 			router.push(`/#${id}`)
 		}
     }
-	
+
 	// Handler for scrolling to top when clicking profile picture
 	const handleProfileClick = () => {
 		document.body.classList.remove('no-scroll')
 		setMenuOpen(false)
-		
-		if (pathname === '/') {
-			window.scrollTo({ top: 0, behavior: 'smooth' })
-			history.pushState(null, '', '/')
-		} else {
-			router.push('/')
-		}
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
 	return (
@@ -95,7 +100,7 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 					/>
 				</button>
 			</div>
-			
+
 			{/* Mobile overlay and dropdown menu */}
 			<div
 				className={`mobileOverlay ${menuOpen ? 'show' : ''}`}
