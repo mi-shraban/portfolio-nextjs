@@ -488,7 +488,7 @@ h5 {
 .projectImg {
 	width: 100%;
 	height: 100%;
-	border: 1px solid var(--primary);
+	border: 1px solid var(--darkeraccent);
 	border-radius: 7px;
 	transition: transform .2s ease, box-shadow .2s ease;
 }
@@ -505,7 +505,8 @@ h5 {
 
 .projectImg:hover {
 	transform: scale(1.02);
-	box-shadow: 0 0 14px rgba(0,188,212,.28); }
+	box-shadow: 0 0 14px rgba(0,188,212,.28);
+}
 
 /* Hover overlay for project thumbnails */
 .thumbOverlay {
@@ -524,7 +525,7 @@ h5 {
 .projectThumb:hover .thumbOverlay {
 	opacity: 1;
 	pointer-events: auto;
-	background: linear-gradient(90deg, var(--darkeraccent), transparent, var(--darkeraccent));
+	background: linear-gradient(90deg, var(--darkeraccent), transparent 60%, var(--darkeraccent));
 }
 
 .thumbLink{

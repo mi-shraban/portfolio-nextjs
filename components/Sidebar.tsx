@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import resumePdf from '../public/pdfs/CV_Md._Monowarul_Islam.pdf'
 import { useEffect, useRef, useState } from 'react'
+import Navbar from './Navbar'
 
 const sections = [
 	{ id: 'aboutme', label: 'About Me' },
@@ -11,183 +11,127 @@ const sections = [
 	{ id: 'projects', label: 'Projects' },
 	{ id: 'research', label: 'Research' },
 	{ id: 'experience', label: 'Experience' },
-    { id: 'reachout', label: 'Reach Out' }
+	{ id: 'reachout', label: 'Reach Out' }
 ]
 
-const Sidebar = () => {
-    const containerRef = useRef<HTMLElement | null>(null)
-    const hoverLockRef = useRef<boolean>(false)
-    const [menuOpen, setMenuOpen] = useState(false)
-    const [showMobileNavbar, setShowMobileNavbar] = useState(false)
+export default function Sidebar(){
+	const containerRef = useRef<HTMLElement | null>(null)
+	const hoverLockRef = useRef<boolean>(false)
+	const [showMobileNavbar, setShowMobileNavbar] = useState(false)
 
-    useEffect(() => {
-        const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav a'))
-        const observer = new IntersectionObserver(
-            entries => {
-                // Skip IntersectionObserver updates while hovering over a section
-                if (hoverLockRef.current) return
-                for (const e of entries) {
-                    const link = links.find(l => l.getAttribute('href') === `#${e.target.id}`)
-                    if (!link) continue
-                    if (e.isIntersecting) link.classList.add('active')
-                    else link.classList.remove('active')
-                }
-            },
-            {rootMargin: '-40% 0px -55% 0px', threshold: 0.1}
-        )
+	// IntersectionObserver for active nav link highlighting
+	useEffect(() => {
+		const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav a'))
+		const observer = new IntersectionObserver(
+			entries => {
+				if (hoverLockRef.current) return
+				for (const e of entries) {
+					const link = links.find(l => l.getAttribute('href') === `#${e.target.id}`)
+					if (!link) continue
+					if (e.isIntersecting) link.classList.add('active')
+					else link.classList.remove('active')
+				}
+			},
+			{ rootMargin: '-40% 0px -55% 0px', threshold: 0.1 }
+		)
 
-        const secNodes = sections.map(s => document.getElementById(s.id)).filter(Boolean) as Element[]
+		const secNodes = sections.map(s => document.getElementById(s.id)).filter(Boolean) as Element[]
 
-        // Hover handlers to activate corresponding nav link
-        const onEnter = (id: string) => {
-            hoverLockRef.current = true
-            links.forEach(l => l.classList.remove('active'))
-            const link = links.find(l => l.getAttribute('href') === `#${id}`)
-            if (link) link.classList.add('active')
-        }
-        const onLeave = () => {
-            hoverLockRef.current = false
-        }
+		// Hover handlers to activate corresponding nav link
+		const onEnter = (id: string) => {
+			hoverLockRef.current = true
+			links.forEach(l => l.classList.remove('active'))
+			const link = links.find(l => l.getAttribute('href') === `#${id}`)
+			if (link) link.classList.add('active')
+		}
+		const onLeave = () => {
+			hoverLockRef.current = false
+		}
 
-        const enterHandlers: Array<{ el: Element; fn: (ev: Event) => void }> = []
-        const leaveHandlers: Array<{ el: Element; fn: (ev: Event) => void }> = []
+		const enterHandlers: Array<{ el: Element; fn: (ev: Event) => void }> = []
+		const leaveHandlers: Array<{ el: Element; fn: (ev: Event) => void }> = []
 
-        secNodes.forEach(n => {
-            observer.observe(n)
-            const enter = () => onEnter((n as HTMLElement).id)
-            const leave = () => onLeave()
-            n.addEventListener('mouseenter', enter)
-            n.addEventListener('mouseleave', leave)
-            enterHandlers.push({ el: n, fn: enter })
-            leaveHandlers.push({ el: n, fn: leave })
-        })
+		secNodes.forEach(n => {
+			observer.observe(n)
+			const enter = () => onEnter((n as HTMLElement).id)
+			const leave = () => onLeave()
+			n.addEventListener('mouseenter', enter)
+			n.addEventListener('mouseleave', leave)
+			enterHandlers.push({ el: n, fn: enter })
+			leaveHandlers.push({ el: n, fn: leave })
+		})
 
-        return () => {
-            observer.disconnect()
-            enterHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseenter', fn))
-            leaveHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseleave', fn))
-        }
-    }, [])
+		return () => {
+			observer.disconnect()
+			enterHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseenter', fn))
+			leaveHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseleave', fn))
+		}
+	}, [])
 
-    // Detect when sidebar goes out of view to show mobile navbar
-    useEffect(() => {
-        const handleScroll = () => {
-            if (containerRef.current) {
-                const rect = containerRef.current.getBoundingClientRect()
-                setShowMobileNavbar(rect.top < -415)
-            }
-        }
-        window.addEventListener('scroll', handleScroll)
-        handleScroll()
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+	// Detect when sidebar goes out of view to show mobile navbar
+	useEffect(() => {
+		const handleScroll = () => {
+			if (containerRef.current) {
+				const rect = containerRef.current.getBoundingClientRect()
+				setShowMobileNavbar(rect.top < -415)
+			}
+		}
+		window.addEventListener('scroll', handleScroll)
+		handleScroll()
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 
-    // Lock body scroll when menu is open and close on Escape
-    useEffect(() => {
-        const onKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') setMenuOpen(false)
-        }
-        document.addEventListener('keydown', onKey)
-        if (menuOpen) document.body.classList.add('no-scroll')
-        else document.body.classList.remove('no-scroll')
-        return () => {
-            document.removeEventListener('keydown', onKey)
-            document.body.classList.remove('no-scroll')
-        }
-    }, [menuOpen])
-
-    // Unified handler for smooth scrolling to sections (desktop + mobile)
-    const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault()
-        // Ensure background can scroll before initiating smooth scroll
-        document.body.classList.remove('no-scroll')
-        setMenuOpen(false)
-        const el = document.getElementById(id)
-        if (el) {
-            // Smooth scroll into view and update URL hash without jump
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            history.pushState(null, '', `#${id}`)
-        }
-    }
+	// Handler for smooth scrolling to sections
+	const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault()
+		const el = document.getElementById(id)
+		if (el) {
+			el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			history.pushState(null, '', `#${id}`)
+		}
+	}
 
 	return (
-		<aside className="sidebar" ref={containerRef as any}>
-            <div>
-                <div className="profile">
-                    <div className="profilePic">
-                        <Image src="/photos/profile.png" alt="Profile" width={1509} height={1509} />
-                    </div>
-                    <h2 className="name">MD. MONOWARUL ISLAM<br /><small>Computer Science Graduate</small></h2>
-                </div>
-                {/* Desktop nav stays as-is; hidden on mobile via CSS */}
-                <nav className={`nav`} role="navigation" aria-label="Section navigation">
-                    {sections.map(s => (
-                        <a key={s.id} href={`#${s.id}`} onClick={handleNavClick(s.id)}>{s.label}</a>
-                    ))}
-                </nav>
-            </div>
-            <div className="socials">
-                <Link href="https://www.linkedin.com/in/md-monowarul-islam-b7657b341/" target="_blank">
-                    <Image src="/icons/linkedin-white.svg" alt="LinkedIn" width={28} height={28} />
-                </Link>
-                <Link href="https://github.com/mi-shraban" target="_blank">
-                    <Image src="/icons/github-white.svg" alt="GitHub" width={28} height={28} />
-                </Link>
-                <Link href="https://leetcode.com/u/xordan77/" target="_blank">
-                    <Image src="/icons/leetcode-white.svg" alt="LeetCode" width={28} height={28} />
-                </Link>
-                <Link href="https://codeforces.com/profile/xordan.-" target="_blank">
-                    <Image src="/icons/codeforces-white.svg" alt="Codeforces" width={28} height={28} />
-                </Link>
-            </div>
-
-            {/* Mobile navbar island with hamburger - shows when scrolled */}
-            <div className={`mobileNavbar ${showMobileNavbar ? 'visible' : ''}`}>
-                <div className="profile">
-                    <div className="profilePic">
-                        <Image src="/photos/profile.png" alt="Profile" width={64} height={64}/>
-                    </div>
-                </div>
-                <span className="mobileNavbarName">MD. MONOWARUL ISLAM</span>
-                <button
-                    className="hamburger"
-                    aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
-                    aria-controls="mobileNav"
-                    aria-expanded={menuOpen}
-                    onClick={() => setMenuOpen(o => !o)}
-                >
-                    <Image src={menuOpen ? '/icons/cross.svg' : '/icons/burger-menu.svg'} alt="menu" width={22}
-                           height={22}/>
-                </button>
-            </div>
-            
-            {/* Mobile overlay and dropdown menu */}
-            <div className={`mobileOverlay ${menuOpen ? 'show' : ''}`} onClick={() => setMenuOpen(false)}/>
-            <nav id="mobileNav" className={`mobileNav ${menuOpen ? 'open' : ''}`} role="navigation"
-                 aria-label="Mobile section navigation">
-                {sections.map(s => (
-                    <a key={s.id} href={`#${s.id}`} onClick={handleNavClick(s.id)}>{s.label}</a>
-                ))}
-                <div className='nav-bottom'>
-                    <a className="btn" href={resumePdf} download>Download my Resume</a>
-                    <div className="socials">
-                        <Link href="https://www.linkedin.com/in/md-monowarul-islam-b7657b341/" target="_blank">
-                            <Image src="/icons/linkedin-white.svg" alt="LinkedIn" width={28} height={28}/>
-                        </Link>
-                        <Link href="https://github.com/mi-shraban" target="_blank">
-                            <Image src="/icons/github-white.svg" alt="GitHub" width={28} height={28}/>
-                        </Link>
-                        <Link href="https://leetcode.com/u/xordan77/" target="_blank">
-                            <Image src="/icons/leetcode-white.svg" alt="LeetCode" width={28} height={28}/>
-                        </Link>
-                        <Link href="https://codeforces.com/profile/xordan.-" target="_blank">
-                            <Image src="/icons/codeforces-white.svg" alt="Codeforces" width={28} height={28}/>
-                        </Link>
-                    </div>
-                </div>
-            </nav>
-        </aside>
-    )
+		<>
+			<aside className="sidebar" ref={containerRef as any}>
+				<div>
+					<div className="profile">
+						<div className="profilePic">
+							<Image src="/photos/profile.png" alt="Profile" width={1509} height={1509} />
+						</div>
+						<h2 className="name">
+							MD. MONOWARUL ISLAM
+							<br />
+							<small>Computer Science Graduate</small>
+						</h2>
+					</div>
+					{/* Desktop nav */}
+					<nav className="nav" role="navigation" aria-label="Section navigation">
+						{sections.map(s => (
+							<a key={s.id} href={`#${s.id}`} onClick={handleNavClick(s.id)}>
+								{s.label}
+							</a>
+						))}
+					</nav>
+				</div>
+				<div className="socials">
+					<Link href="https://www.linkedin.com/in/md-monowarul-islam-b7657b341/" target="_blank">
+						<Image src="/icons/linkedin-white.svg" alt="LinkedIn" width={28} height={28} />
+					</Link>
+					<Link href="https://github.com/mi-shraban" target="_blank">
+						<Image src="/icons/github-white.svg" alt="GitHub" width={28} height={28} />
+					</Link>
+					<Link href="https://leetcode.com/u/xordan77/" target="_blank">
+						<Image src="/icons/leetcode-white.svg" alt="LeetCode" width={28} height={28} />
+					</Link>
+					<Link href="https://codeforces.com/profile/xordan.-" target="_blank">
+						<Image src="/icons/codeforces-white.svg" alt="Codeforces" width={28} height={28} />
+					</Link>
+				</div>
+			</aside>
+			
+			{/* Mobile Navbar Component */}
+			<Navbar showMobileNavbar={showMobileNavbar} />
+		</>
+	)
 }
-
-export default Sidebar
