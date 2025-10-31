@@ -74,7 +74,7 @@ const Sidebar = () => {
         const handleScroll = () => {
             if (containerRef.current) {
                 const rect = containerRef.current.getBoundingClientRect()
-                setShowMobileNavbar(rect.top < -490)
+                setShowMobileNavbar(rect.top < -415)
             }
         }
         window.addEventListener('scroll', handleScroll)

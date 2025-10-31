@@ -617,7 +617,7 @@ h5 {
 		border: 1px solid var(--border);
 		box-shadow: 0 0 0 1px rgba(0,0,0,0.35), 0 0 16px rgba(0,188,212,0.08);
 		position: fixed;
-		top: -490px; /* Hidden above viewport initially, also necessary to make sure there is not a ghost button */
+		top: -415px; /* Hidden above viewport initially, also necessary to make sure there is not a ghost button */
 		left: 15px;
 		right: 15px;
 		z-index: 95;
