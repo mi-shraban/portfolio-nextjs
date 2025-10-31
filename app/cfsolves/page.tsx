@@ -13,7 +13,7 @@ type Submission = {
 }
 
 const handle = 'xordan.-'
-const pageSize = 14
+const pageSize = 40
 
 function getLanguage(lang?: string) {
 	const lower = (lang || '').toLowerCase()
@@ -93,22 +93,31 @@ export default function CFPage() {
 	// if (loading) return <div className="cfWrap">Fetching submissions...</div>
 	if (loading)
   		return (
-			<div className="cfWrap">
-			  <div className="cfSpinner"></div>
+			<div className="cfsolves-page">
+				<div className="cfWrap">
+					<div className="cfSpinner"></div>
+				</div>
 			</div>
-  		);
+		);
 	
-	if (error) return <div className="cfWrap">Error: {error}</div>
-
+	if (error)
+		return (
+			<div className="cfsolves-page">
+				<div className="cfWrap">
+					Error: {error}
+				</div>
+			</div>
+		)
+	
 	const sortedLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
 	const topLangs = sortedLangs.slice(0, 2).map(([k]) => k).join(', ');
 	const front = '>';
 	const back = '<';
 
 	return (
-		<>
+		<div className="cfsolves-page">
 			<div className="cfWrap">
-				<h2 className="cfHeader">Codeforces Submissions of <a className="ab_link"
+				<h2 className="cfHeader">Codeforces Submissions of <a className="as_link"
 																	  href={`https://codeforces.com/profile/${handle}`}
 																	  target="_blank"
 																	  rel="noopener noreferrer">[{handle}]</a></h2>
@@ -182,6 +191,6 @@ export default function CFPage() {
 					<button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>{front}</button>}
 				{page < totalPages && <button className="cfBtn" onClick={() => setPage(totalPages)}>Last</button>}
 			</div>
-		</>
+		</div>
 	)
 }

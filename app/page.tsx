@@ -22,17 +22,14 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
     return (
-        <div className="shell">
-            <Sidebar />
-            <main className="main">
-                <AboutMe />
-                <Education />
-                <Skills />
-                <Projects />
-                <Research />
-                <Experience />
-                <ReachOut />
-            </main>
-        </div>
+		<>
+			<AboutMe />
+			<Education />
+			<Skills />
+			<Projects />
+			<Research />
+			<Experience />
+			<ReachOut />
+		</>
     )
 }

@@ -352,13 +352,19 @@ h5 {
 }
 
 /* CF page */
+.cfsolves-page {
+	grid-column: 1 / -1;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
 .cfWrap {
-	max-width: 1100px;
 	margin: 0 auto;
 	padding: 24px;
 }
 
 .cfHeader {
+	display: block;
 	text-align: center;
 	color: var(--primary);
 	font-size: 30px;

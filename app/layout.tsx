@@ -157,8 +157,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			/>
 		</head>
 		<body className={bodyFont.className}>
-			{/*<Sidebar />*/}
-			{children}
+			<div className="shell">
+				<Sidebar/>
+				<main className="main">
+					{children}
+				</main>
+			</div>
 		</body>
 		</html>
 	)
