@@ -10,8 +10,7 @@ export default function AboutMe() {
                         from <a href="https://bracu.ac.bd" className="ab_link" target="_blank">Brac University</a>,
                         awaiting
                         conferral.I enjoy programming challenges, I have solved over <a className="ab_link"
-                                                                                        href="/cfsolves"
-                                                                                        target="_blank">250 problems on
+                                                                                        href="/cfsolves">250 problems on
                             Codeforces</a>
                         <span> </span>and more than <a href="https://leetcode.com/u/xordan77/" className="ab_link"
                                                        target="_blank">150 problems on LeetCode</a>.

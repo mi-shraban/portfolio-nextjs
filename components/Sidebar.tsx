@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { useRouter, usePathname  } from "next/navigation";
 import Navbar from './Navbar'
 
 const sections = [
@@ -18,6 +19,8 @@ export default function Sidebar(){
 	const containerRef = useRef<HTMLElement | null>(null)
 	const hoverLockRef = useRef<boolean>(false)
 	const [showMobileNavbar, setShowMobileNavbar] = useState(false)
+	const router = useRouter()
+	const pathname = usePathname()
 
 	// IntersectionObserver for active nav link highlighting
 	useEffect(() => {
@@ -66,8 +69,26 @@ export default function Sidebar(){
 			enterHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseenter', fn))
 			leaveHandlers.forEach(({ el, fn }) => el.removeEventListener('mouseleave', fn))
 		}
-	}, [])
+	}, [pathname])
+	
+	// Handler for smooth scrolling to sections
+	const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        // Ensure background can scroll before initiating smooth scroll
+        document.body.classList.remove('no-scroll')
 
+		if (pathname === '/') {
+			const el = document.getElementById(id)
+			if (el) {
+				// Smooth scroll into view and update URL hash without jump
+				el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				history.pushState(null, '', `#${id}`)
+			}
+		} else {
+			router.push(`/#${id}`)
+		}
+    }
+	
 	// Detect when sidebar goes out of view to show mobile navbar
 	useEffect(() => {
 		const handleScroll = () => {
@@ -80,16 +101,6 @@ export default function Sidebar(){
 		handleScroll()
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
-
-	// Handler for smooth scrolling to sections
-	const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault()
-		const el = document.getElementById(id)
-		if (el) {
-			el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-			history.pushState(null, '', `#${id}`)
-		}
-	}
 
 	return (
 		<>

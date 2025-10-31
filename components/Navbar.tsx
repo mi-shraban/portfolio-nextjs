@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import resumePdf from '../public/pdfs/CV_Md._Monowarul_Islam.pdf'
 import { useEffect, useState } from 'react'
+import {usePathname, useRouter} from "next/navigation";
 
 const sections = [
 	{ id: 'aboutme', label: 'About Me' },
@@ -20,6 +21,8 @@ interface NavbarProps {
 
 export default function Navbar({ showMobileNavbar }: NavbarProps){
 	const [menuOpen, setMenuOpen] = useState(false)
+	const router = useRouter()
+	const pathname = usePathname()
 
 	// Lock body scroll when menu is open and close on Escape
 	useEffect(() => {
@@ -37,15 +40,22 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 
 	// Handler for smooth scrolling to sections
 	const handleNavClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault()
-		document.body.classList.remove('no-scroll')
-		setMenuOpen(false)
-		const el = document.getElementById(id)
-		if (el) {
-			el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-			history.pushState(null, '', `#${id}`)
+        e.preventDefault()
+        // Ensure background can scroll before initiating smooth scroll
+        document.body.classList.remove('no-scroll')
+        setMenuOpen(false)
+
+		if (pathname === '/') {
+			const el = document.getElementById(id)
+			if (el) {
+				// Smooth scroll into view and update URL hash without jump
+				el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				history.pushState(null, '', `#${id}`)
+			}
+		} else {
+			router.push(`/#${id}`)
 		}
-	}
+    }
 
 	return (
 		<>
