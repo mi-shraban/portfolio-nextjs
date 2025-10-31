@@ -53,17 +53,18 @@ export default function CFPage() {
 				const data = await res.json()
 				if (data.status !== 'OK')
 					throw new Error(data.comment || 'API error')
-
                 const seen = new Set<string>()
                 const lc: Record<string, number> = {}
                 const processed: Submission[] = []
                 for (const sub of data.result as any[]) {
                     const verdict = sub.verdict || 'UNKNOWN'
-                    if (verdict !== 'OK') continue
+                    if (verdict !== 'OK')
+						continue
                     const problem = sub.problem || {}
                     const name: string = problem.name || 'Unknown Problem'
                     const key = `${problem.contestId || 'N/A'}${problem.index || '?'}`
-                    if (seen.has(key)) continue
+                    if (seen.has(key))
+						continue
                     seen.add(key)
                     const language = getLanguage(sub.programmingLanguage)
                     lc[language] = (lc[language] || 0) + 1
@@ -89,6 +90,11 @@ export default function CFPage() {
 		}
 		fetchData()
 	}, [])
+	
+	// scrolls to top, everytime page changes
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}, [page])
 
 	// if (loading) return <div className="cfWrap">Fetching submissions...</div>
 	if (loading)
@@ -179,17 +185,32 @@ export default function CFPage() {
 					// windowed buttons around current page
 					let start = Math.max(1, page - 1)
 					let end = Math.min(totalPages, start + 3)
-					if (end - start < 3) start = Math.max(1, end - 3)
+					if (end - start < 3)
+						start = Math.max(1, end - 3)
 					const n = start + i
-					if (n > end) return null
+					if (n > end)
+						return null
 					return (
-						<button key={n} className={`cfBtn ${n === page ? 'active' : ''}`}
-								onClick={() => setPage(n)}>{n}</button>
+						<button key={n}
+								className={`cfBtn ${n === page ? 'active' : ''}`}
+								onClick={() => setPage(n)}
+						>
+							{n}
+						</button>
 					)
 				})}
-				{page < totalPages &&
-					<button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>{front}</button>}
-				{page < totalPages && <button className="cfBtn" onClick={() => setPage(totalPages)}>Last</button>}
+				{
+					page < totalPages &&
+					<button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>
+						{front}
+					</button>
+				}
+				{
+					page < totalPages &&
+					<button className="cfBtn" onClick={() => setPage(totalPages)}>
+						Last
+					</button>
+				}
 			</div>
 		</>
 	)
