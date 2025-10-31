@@ -46,6 +46,7 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
         document.body.classList.remove('no-scroll')
         setMenuOpen(false)
 		
+		// logic for home button
 		if (id === 'home') {
 			if (pathname === '/') {
 				window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -55,7 +56,8 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 			}
 			return
 		}
-
+		
+		// logic for other section buttons
 		if (pathname === '/') {
 			const el = document.getElementById(id)
 			if (el) {
