@@ -56,12 +56,25 @@ export default function Navbar({ showMobileNavbar }: NavbarProps){
 			router.push(`/#${id}`)
 		}
     }
+	
+	// Handler for scrolling to top when clicking profile picture
+	const handleProfileClick = () => {
+		document.body.classList.remove('no-scroll')
+		setMenuOpen(false)
+		
+		if (pathname === '/') {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+			history.pushState(null, '', '/')
+		} else {
+			router.push('/')
+		}
+	}
 
 	return (
 		<>
 			{/* Mobile navbar island with hamburger - shows when scrolled */}
 			<div className={`mobileNavbar ${showMobileNavbar ? 'visible' : ''}`}>
-				<div className="profile">
+				<div className="profile" onClick={handleProfileClick} style={{ cursor: 'pointer' }}>
 					<div className="profilePic">
 						<Image src="/photos/profile.png" alt="Profile" width={512} height={512}/>
 					</div>
