@@ -13,7 +13,7 @@ type Submission = {
 }
 
 const handle = 'xordan.-'
-const pageSize = 40
+const pageSize = 20
 
 function getLanguage(lang?: string) {
 	const lower = (lang || '').toLowerCase()
@@ -115,8 +115,8 @@ export default function CFPage() {
 	const back = '<';
 
 	return (
-		<div className="cfsolves-page">
-			<div className="cfWrap">
+		<>
+			<div className="cfSolves-page">
 				<h2 className="cfHeader">Codeforces Submissions of <a className="as_link"
 																	  href={`https://codeforces.com/profile/${handle}`}
 																	  target="_blank"
@@ -191,6 +191,6 @@ export default function CFPage() {
 					<button className="cfBtn" onClick={() => setPage(p => Math.min(totalPages, p + 1))}>{front}</button>}
 				{page < totalPages && <button className="cfBtn" onClick={() => setPage(totalPages)}>Last</button>}
 			</div>
-		</div>
+		</>
 	)
 }
