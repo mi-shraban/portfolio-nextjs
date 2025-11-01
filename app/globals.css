@@ -719,8 +719,6 @@ h5 {
 		color: black;
 	}
 
-
-
 	.mobileNav a {
 		text-align: center;
 		padding: 12px 16px;
@@ -755,6 +753,16 @@ h5 {
 	}
 	.link_icon {
 		transform: rotate(0deg);
+	}
+}
+
+@media (max-width: 1500px){
+	.project {
+		flex-direction: column;
+	}
+
+	.projectThumb {
+		width: 100%;
 	}
 }
 

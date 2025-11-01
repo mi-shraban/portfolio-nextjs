@@ -17,15 +17,20 @@ const pageSize = 20
 
 function getLanguage(lang?: string) {
 	const lower = (lang || '').toLowerCase()
-	if (lower.includes('py')) return 'Python'
-	if (lower.includes('c++')) return 'C++'
-	if (lower.includes('javascript')) return 'JavaScript'
+	if (lower.includes('py'))
+		return 'Python'
+	if (lower.includes('c++'))
+		return 'C++'
+	if (lower.includes('javascript'))
+		return 'JavaScript'
 	return lang || 'Unknown'
 }
 
 function getFileName(language: string, id: string) {
-	if (language === 'Python') return `${id}.py`
-	if (language === 'C++') return `${id}.cpp`
+	if (language === 'Python')
+		return `${id}.py`
+	if (language === 'C++')
+		return `${id}.cpp`
 	return ''
 }
 
