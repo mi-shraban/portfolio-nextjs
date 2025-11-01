@@ -24,17 +24,17 @@ export default function AboutMe() {
                         industry experience and implement my skills in the real world environment. You can find my <strong>resume</strong> <a
                             className="ab_link"
                             href={resumePdf} target="_blank">here</a>.
-                        {/*<br/>*/}
-                        {/*<br/>*/}
-                        {/*On my free time, I enjoy playing video games, solving problems, watching movies, TV series and*/}
-                        {/*anime. Some of my favorites are <span> </span>*/}
-                        {/*<a href="https://www.imdb.com/title/tt6161168/" className="as_link" target="_blank">Red Dead*/}
-                        {/*    Redemption II</a>,<span> </span>*/}
-                        {/*<a href="https://www.imdb.com/title/tt0111161/" className="as_link" target="_blank">The*/}
-                        {/*    Shawshank Redemption</a>,<span> </span>*/}
-                        {/*<a href="https://www.imdb.com/title/tt0903747/" className="as_link" target="_blank">Breaking*/}
-                        {/*    Bad</a> and <span> </span>*/}
-                        {/*<a href="https://www.imdb.com/title/tt0434706/" className="as_link" target="_blank">Monster</a>.*/}
+                    </p>
+                    <p>
+                        On my free time, I enjoy playing video games, solving programming problems, watching movies, TV series and
+                        anime. Some of my favorites are <span> </span>
+                        <a href="https://www.imdb.com/title/tt6161168/" className="as_link" target="_blank">Red Dead
+                            Redemption II</a>,<span> </span>
+                        <a href="https://www.imdb.com/title/tt0111161/" className="as_link" target="_blank">The
+                            Shawshank Redemption</a>,<span> </span>
+                        <a href="https://www.imdb.com/title/tt0903747/" className="as_link" target="_blank">Breaking
+                            Bad</a> and <span> </span>
+                        <a href="https://www.imdb.com/title/tt0434706/" className="as_link" target="_blank">Monster</a>.
                     </p>
                 </div>
         </section>

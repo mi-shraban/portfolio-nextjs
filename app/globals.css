@@ -44,8 +44,10 @@ a {
 }
 
 .as_link {
-	display: inline-block;
 	transition: transform 0.3s ease;
+	display: inline;
+	white-space: normal;
+	word-break: keep-all;
 }
 
 .as_link:hover {
@@ -55,7 +57,9 @@ a {
 .ab_link{
 	font-weight: bold;
 	position: relative;
-	display: inline-block;
+	display: inline;
+	white-space: normal;
+	word-break: keep-all;
 }
 
 .ab_link::after {
