@@ -24,9 +24,22 @@ body.no-scroll {
 	overflow: hidden;
 }
 
+p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+li p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 a {
 	color: var(--primary);
 	text-decoration: none;
+	display: inline;
+	white-space: normal;
+	word-break: keep-all;
 	transition: color .2s ease;
 }
 

@@ -64,7 +64,7 @@ export default function Projects() {
 						<li>Tools: <i>HTML, CSS, Tailwind, Python, Flask, SQLite</i></li>
 						<li>
 							<p>
-								Another website for blood donation related activities. Here, security was improved
+								A rework of the Blood Donation System. Here, security was improved
 								using the Bcrypt encryption algorithm. In addition, newer technologies such as Flask
 								framework were used to modernize the code base.
 							</p>
