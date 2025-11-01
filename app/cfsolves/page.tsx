@@ -98,7 +98,7 @@ export default function CFPage() {
 	
 	// scrolls to top, everytime page changes
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
+		window.scrollTo({ top: 435, behavior: 'smooth' })
 	}, [page])
 
 	// if (loading) return <div className="cfWrap">Fetching submissions...</div>
