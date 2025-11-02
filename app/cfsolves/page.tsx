@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useMemo, useState } from 'react'
+import Image from "next/image";
 
 type Submission = {
 	sub_id: number
@@ -32,6 +33,14 @@ function getFileName(language: string, id: string) {
 	if (language === 'C++')
 		return `${id}.cpp`
 	return ''
+}
+
+function getLanguageIcon(language: string): string | null {
+	if (language === 'Python')
+		return '/icons/python.png'
+	if (language === 'C++')
+		return '/icons/cpp.png'
+	return null
 }
 
 export default function CFPage() {
@@ -155,6 +164,7 @@ export default function CFPage() {
 						const problemUrl = (s.contestId && s.index) ? `https://codeforces.com/contest/${s.contestId}/problem/${s.index}` : '#'
 						const file = getFileName(s.language, s.id)
 						const solUrl = file ? `https://github.com/mi-shraban/cf_solves/blob/main/${file}` : ''
+						const langIcon = getLanguageIcon(s.language)
 						return (
 							<div key={s.sub_id} className="cfItem">
 								<div className="cfTitle">Problem: <a className="ab_link" target="_blank"
@@ -168,12 +178,24 @@ export default function CFPage() {
 									Submitted on: <b>{s.time}</b>
 								</div>
 								{
-									solUrl && <div style={{marginTop: 8}}>
+									solUrl &&
+									<div style={{marginTop: 8}}>
 										<a className="btn" href={solUrl} target="_blank"
 																		  rel="noopener noreferrer">View my Solution
 										</a>
 									</div>
 								}
+								{langIcon && (
+									<div className="cfIcon">
+										<Image
+											src={langIcon}
+											alt={s.language}
+											width={128}
+											height={128}
+											style={{ objectFit: 'contain' }}
+										/>
+									</div>
+								)}
 							</div>
 						)
 					})}

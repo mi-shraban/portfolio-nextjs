@@ -115,6 +115,7 @@ a {
 	border-radius: 16px;
 	border: 1px solid var(--border);
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.35), 0 0 16px rgba(0,188,212,0.08);
+	overflow-y: auto;
 }
 
 .sidebar h2::after {
@@ -428,14 +429,12 @@ h5 {
 	left: 100%;
 }
 
-/* Card hover state */
-.cfItem:hover {
-	/*transform: translateY(-6px);*/
-	box-shadow:
-		0 12px 24px rgba(0,188,212,0.25),
-		0 0 20px rgba(0,188,212,0.15),
-		inset 0 1px 0 rgba(255,255,255,0.1);
-	border-color: rgba(0,188,212,0.5);
+.cfIcon {
+	position: absolute;
+	bottom: 50%;
+	right: 15%;
+	width: 64px;
+	height: 64px;
 }
 
 .cfTitle {
@@ -616,6 +615,10 @@ h5 {
 		grid-template-columns: 1fr;
 	}
 
+	.cfIcon {
+		display: none;
+	}
+
 	.project {
 		flex-direction: column;
 	}
@@ -780,6 +783,10 @@ h5 {
 
 	.projectThumb {
 		width: 100%;
+	}
+
+	.cfIcon {
+		display: none;
 	}
 }
 
