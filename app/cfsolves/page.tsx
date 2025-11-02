@@ -121,7 +121,7 @@ export default function CFPage() {
 		)
 	
 	const sortedLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
-	const topLangs = sortedLangs.slice(0, 2).map(([k]) => k).join(', ');
+	const usedLangs = sortedLangs.map(([k]) => k).join(', ');
 	const front = '>';
 	const back = '<';
 
@@ -143,15 +143,7 @@ export default function CFPage() {
 					</div>
 					<div>
 						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>
-							{topLangs || 'N/A'}
-						</div>
-						<div className="muted" style={{textAlign: "center"}}>
-							Most Used Languages
-						</div>
-					</div>
-					<div>
-						<div style={{color: 'var(--primary)', fontWeight: 700, fontSize: 22, textAlign: "center"}}>
-							{Object.keys(langCount).length}
+							{usedLangs || 'N/A'}
 						</div>
 						<div className="muted" style={{textAlign: "center"}}>
 							Languages Used
@@ -175,9 +167,13 @@ export default function CFPage() {
 								<div className="cfMeta">
 									Submitted on: <b>{s.time}</b>
 								</div>
-								{solUrl && <div style={{marginTop: 8}}><a className="btn" href={solUrl} target="_blank"
-																		  rel="noopener noreferrer">View my Solution</a>
-								</div>}
+								{
+									solUrl && <div style={{marginTop: 8}}>
+										<a className="btn" href={solUrl} target="_blank"
+																		  rel="noopener noreferrer">View my Solution
+										</a>
+									</div>
+								}
 							</div>
 						)
 					})}
