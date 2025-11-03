@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import Sidebar from "@/components/Sidebar";
+import { Analytics } from "@vercel/analytics/next"
 
 const bodyFont = Space_Grotesk({
     subsets: ['latin'],
