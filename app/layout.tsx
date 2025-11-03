@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import Sidebar from "@/components/Sidebar";
 
-// Techy fonts: IBM Plex Sans for body, Orbitron for display/headings
 const bodyFont = Space_Grotesk({
     subsets: ['latin'],
     weight: ['300', '400', '500', '600', '700'],
