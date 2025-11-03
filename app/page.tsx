@@ -1,4 +1,3 @@
-import Sidebar from '@/components/Sidebar'
 import AboutMe from '@/components/sections/AboutMe'
 import Education from '@/components/sections/Education'
 import Skills from '@/components/sections/Skills'

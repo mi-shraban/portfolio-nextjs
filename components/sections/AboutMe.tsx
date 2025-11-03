@@ -1,14 +1,16 @@
 import React from "react";
+import { getFallbacks, updateFallbacks } from "@/lib/fallbacks";
+
 
 const resumePdf = '/pdfs/CV_Md._Monowarul_Islam.pdf'
 
-// Fallback values from environment variables or hardcoded defaults
-const FALLBACK_CF = parseInt(process.env.NEXT_PUBLIC_FALLBACK_CF || '290', 10);
-const FALLBACK_LC = parseInt(process.env.NEXT_PUBLIC_FALLBACK_LC || '198', 10);
-
 async function getProblemCounts() {
+    const { FALLBACK_CF, FALLBACK_LC } = getFallbacks();
+    let cfCount = FALLBACK_CF;
+    let lcCount = FALLBACK_LC;
+    
     const fetchWithTimeout = async (url: string, options: RequestInit & { timeout?: number } = {}) => {
-        const { timeout = 8000, ...fetchOptions } = options;
+        const { timeout = 3000, ...fetchOptions } = options;
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeout);
         
@@ -30,7 +32,7 @@ async function getProblemCounts() {
             fetchWithTimeout('https://codeforces.com/api/user.status?handle=xordan.-', {
                 next: { revalidate: 600 },
                 headers: { 'User-Agent': 'portfolio/1.0' },
-                timeout: 8000
+                timeout: 3000
             }),
             fetchWithTimeout('https://leetcode.com/graphql', {
                 method: 'POST',
@@ -49,7 +51,7 @@ async function getProblemCounts() {
                     variables: { username: 'xordan77' }
                 }),
                 next: { revalidate: 600 },
-                timeout: 8000
+                timeout: 3000
             })
         ]);
 
@@ -67,7 +69,9 @@ async function getProblemCounts() {
                             solved.add(`${sub.problem.contestId}${sub.problem.index}`);
                         }
                     }
-                    if (solved.size > 0) cfCount = solved.size;
+                    if (solved.size > 0)
+                        cfCount = solved.size;
+                        updateFallbacks({ FALLBACK_CF: cfCount });
                 }
             } catch (e) {
                 console.warn('Failed to parse Codeforces data:', e);
@@ -83,7 +87,9 @@ async function getProblemCounts() {
                 const stats = lcData?.data?.matchedUser?.submitStats?.acSubmissionNum;
                 if (Array.isArray(stats)) {
                     const total = stats.find((x: any) => x.difficulty === 'All')?.count;
-                    if (typeof total === 'number' && total > 0) lcCount = total;
+                    if (typeof total === 'number' && total > 0)
+                        lcCount = total;
+                        updateFallbacks({ FALLBACK_LC: lcCount });
                 }
             } catch (e) {
                 console.warn('Failed to parse LeetCode data:', e);
