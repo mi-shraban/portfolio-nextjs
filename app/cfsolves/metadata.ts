@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 		'Codeforces xordan.-',
 	],
 	alternates: {
-		canonical: 'https://monowarulislam.vercel.app/cfsolves'
+		canonical: 'https://mi-shraban.vercel.app/cfsolves'
 	},
 	openGraph: {
 		title: "Monowarul Islam Shraban - 250+ Codeforces Solutions",
 		description: "Browse Md. Monowarul Islam Shraban's competitive programming journey with 250+ solved " +
 			"problems on Codeforces using Python and C++.",
-		url: "https://monowarulislam.vercel.app/cfsolves",
+		url: "https://mi-shraban.vercel.app/cfsolves",
 		siteName: "Monowarul Islam Shraban",
 		type: "website",
 		images: [

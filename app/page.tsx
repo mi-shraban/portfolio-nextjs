@@ -10,12 +10,12 @@ import type {Metadata} from "next";
 export const metadata: Metadata = {
 	title: 'Md. Monowarul Islam - Portfolio',
 	description: "Md. Monowarul Islam's Portfolio",
-	metadataBase: new URL('https://monowarulislam.vercel.app'),
+	metadataBase: new URL('https://mi-shraban.vercel.app'),
 	openGraph: {
 		title: 'Md. Monowarul Islam',
 		description: 'Portfolio of Md. Monowarul Islam.',
 		type: 'website',
-		url: 'https://monowarulislam.vercel.app'
+		url: 'https://mi-shraban.vercel.app'
 	}
 };
 

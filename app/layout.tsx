@@ -35,13 +35,13 @@ export const metadata: Metadata = {
 	],
 	authors: [{
 		name: 'Md. Monowarul Islam Shraban',
-		url: 'https://monowarulislam.vercel.app'
+		url: 'https://mi-shraban.vercel.app'
 	}],
 	creator: 'Md. Monowarul Islam Shraban',
 	publisher: 'Md. Monowarul Islam Shraban',
-	metadataBase: new URL('https://monowarulislam.vercel.app'),
+	metadataBase: new URL('https://mi-shraban.vercel.app'),
 	alternates: {
-		canonical: 'https://monowarulislam.vercel.app'
+		canonical: 'https://mi-shraban.vercel.app'
 	},
 	icons: {
 		icon: '/icons/siteLogo.png',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 		title: 'Md. Monowarul Islam Shraban - Portfolio',
 		description: 'Portfolio showcasing machine learning, web development, and 450+ programming challenge solutions. Specializing in cybersecurity and data science.',
 		type: 'website',
-		url: 'https://monowarulislam.vercel.app',
+		url: 'https://mi-shraban.vercel.app',
 		siteName: 'Monowarul Islam Shraban Portfolio',
 		images: [
 			{
@@ -85,8 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		'@type': 'Person',
 		name: 'Md. Monowarul Islam Shraban',
 		alternateName: ['Monowarul Islam Shraban', 'Shraban', 'Md Monowarul Islam Shraban'],
-		url: 'https://monowarulislam.vercel.app',
-		image: 'https://monowarulislam.vercel.app/photos/profile.png',
+		url: 'https://mi-shraban.vercel.app',
+		image: 'https://mi-shraban.vercel.app/photos/profile.png',
 		description: 'Computer Science graduate from Brac University specializing in machine learning, cybersecurity, and competitive programming with 250+ Codeforces solutions.',
 		jobTitle: 'Computer Science Graduate',
 		alumniOf: {
@@ -126,13 +126,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				'@type': 'ListItem',
 				position: 1,
 				name: 'Home',
-				item: 'https://monowarulislam.vercel.app'
+				item: 'https://mi-shraban.vercel.app'
 			},
 			{
 				'@type': 'ListItem',
 				position: 2,
 				name: 'Codeforces Solutions',
-				item: 'https://monowarulislam.vercel.app/cfsolves'
+				item: 'https://mi-shraban.vercel.app/cfsolves'
 			}
 		]
 	}
@@ -142,7 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
 			<meta name="google-site-verification" content="jhRgtbXtNoO8Q3X38MQyIEEaubId3UR7xeEk57FiPMQ"/>
-			<link rel="canonical" href="https://monowarulislam.vercel.app"/>
+			<link rel="canonical" href="https://mi-shraban.vercel.app"/>
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{

@@ -124,7 +124,7 @@ const nextConfig = {
 
     // Environment variables
     env: {
-        NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://monowarulislam.vercel.app'
+        NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://mi-shraban.vercel.app'
     }
 }
 
