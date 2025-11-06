@@ -11,7 +11,7 @@ export default function Skills() {
 			<div className="card">
 				<h4>Python Libraries &amp; Tools</h4>
 				<ul>
-					<li>NumPy, MatplotLib, Pandas, Scikit-Learn, TensorFlow, OpenCV, OpenGL</li>
+					<li>NumPy, MatplotLib, Pandas, Scikit-Learn, TensorFlow, PyTorch, OpenCV</li>
 				</ul>
 			</div>
 			<div className="card">
