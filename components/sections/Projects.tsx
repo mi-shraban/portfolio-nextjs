@@ -100,6 +100,12 @@ export default function Projects() {
 							Github Repo
 						</a>
 						<a className="proj_link"
+						   href="https://tumor-detector-xordan.vercel.app/"
+						   target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							Live Demo
+						</a>
+						<a className="proj_link"
 						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/Brain_Tumor_Detector_trainer.ipynb"
 						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
@@ -131,9 +137,9 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/"
+						   href="https://tumor-detector-xordan.vercel.app/"
 						   target="_blank" rel="noopener noreferrer"><span
-							className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
+							className="link_icon">&#x1F517;&#xFE0E;</span> Live Demo</a>
 					</div>
 				</div>
 			</div>
