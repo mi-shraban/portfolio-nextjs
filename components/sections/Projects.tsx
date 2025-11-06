@@ -5,7 +5,7 @@ export default function Projects() {
 	return (
 		<section id="projects" className="section">
 			<h2>Projects</h2>
-
+			
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
@@ -36,16 +36,17 @@ export default function Projects() {
 							src="https://repository-images.githubusercontent.com/927801658/2f8c3dcf-5fd6-432e-ad75-a1ea50529f78?v=2"
 							alt="Blood Donation Services"
 							fill
-							style={{ objectFit: "cover" }}
+							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Blood-Donation-Services" target="_blank"
-						   rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
+						   rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Github
+							Repo</a>
 					</div>
 				</div>
 			</div>
-
+			
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
@@ -78,7 +79,7 @@ export default function Projects() {
 							src="https://repository-images.githubusercontent.com/1047299205/0f64c7c4-d72f-4db0-8039-10a01f376854"
 							alt="Blood Aid"
 							fill
-							style={{ objectFit: "cover" }}
+							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
@@ -87,7 +88,55 @@ export default function Projects() {
 					</div>
 				</div>
 			</div>
-
+			
+			<div className="card project">
+				<div style={{flex: 1, minWidth: 0}}>
+					<h3>
+						Brain Tumor Detection
+						<br/>
+						<a className="proj_link"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/" target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							Github Repo
+						</a>
+						<a className="proj_link"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
+						   target="_blank">
+							<span className="link_icon">&#x1F517;&#xFE0E;</span>
+							EDA Notebook
+						</a>
+					</h3>
+					<ul>
+						<li>Tools: <i> Python, PyTorch, NumPy, Pandas, Matplotlib</i></li>
+						<li>
+							<p>
+								Built a CNN based model, trained and tested it with Brain Tumor MRI Dataset to detect
+								3 different type of brain tumor from healthy instances. Achieved nearly 96% in accuracy
+								and precision. Along with a 95.56% true positive rate.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div className="projectThumb">
+					<a href="https://github.com/mi-shraban/Brain_Tumor_Detection/"
+					   target="_blank" rel="noopener noreferrer">
+						<Image
+							className="projectImg"
+							src="https://opengraph.githubassets.com/be0a844bd1a76241e0a45e3271a421827e066eebea212a45883bcfa349838b2c/mi-shraban/Brain_Tumor_Detection"
+							alt="Brain Tumor Detection"
+							fill
+							style={{objectFit: "cover"}}
+						/>
+					</a>
+					<div className="thumbOverlay">
+						<a className="btn"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/blob/main/Brain_Tumor_Detector_trainer.ipynb"
+						   target="_blank" rel="noopener noreferrer"><span
+							className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
+					</div>
+				</div>
+			</div>
+			
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
@@ -124,17 +173,18 @@ export default function Projects() {
 							src="https://repository-images.githubusercontent.com/920718087/ca6947da-ae19-44e7-9c31-7446971f5dca"
 							alt="DSE Stock Closing Price Prediction"
 							fill
-							style={{ objectFit: "cover" }}
+							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn"
 						   href="https://github.com/mi-shraban/DSE-Stock-Closing-Price-Prediction/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
-						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
+						   target="_blank" rel="noopener noreferrer"><span
+							className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
 				</div>
 			</div>
-
+			
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
@@ -168,16 +218,17 @@ export default function Projects() {
 							src="https://opengraph.githubassets.com/9c83a99f458cd6021b13c775a2bcaf85679ac4e996c7516a9f70469a3efa8bdd/mi-shraban/Exam-Hall-Monitoring-System"
 							alt="Exam Hall Monitoring System"
 							fill
-							style={{ objectFit: "cover" }}
+							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn" href="https://github.com/mi-shraban/Exam-Hall-Monitoring-System"
-						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
+						   target="_blank" rel="noopener noreferrer"><span
+							className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
 					</div>
 				</div>
 			</div>
-
+			
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
@@ -215,13 +266,14 @@ export default function Projects() {
 							src="https://opengraph.githubassets.com/b8e5a84ffccf0404b9d849bc502aaf0172ea3dc27097c4676e9cfd6817944297/mi-shraban/Anomaly-Detection-in-Network-Traffic"
 							alt="Anomaly Detection in Network Traffic"
 							fill
-							style={{ objectFit: "cover" }}
+							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn"
 						   href="https://github.com/mi-shraban/Anomaly-Detection-in-Network-Traffic/blob/main/Anomaly_Detection_in_Network_Traffic.ipynb"
-						   target="_blank" rel="noopener noreferrer"><span className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
+						   target="_blank" rel="noopener noreferrer"><span
+							className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
 				</div>
 			</div>
