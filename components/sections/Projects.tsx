@@ -92,15 +92,15 @@ export default function Projects() {
 			<div className="card project">
 				<div style={{flex: 1, minWidth: 0}}>
 					<h3>
-						Brain Tumor Detection
+						Brain Tumor Detector
 						<br/>
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/" target="_blank">
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/" target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Github Repo
 						</a>
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
 						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							EDA Notebook
@@ -118,19 +118,19 @@ export default function Projects() {
 					</ul>
 				</div>
 				<div className="projectThumb">
-					<a href="https://github.com/mi-shraban/Brain_Tumor_Detection/"
+					<a href="https://github.com/mi-shraban/Brain_Tumor_Detector/"
 					   target="_blank" rel="noopener noreferrer">
 						<Image
 							className="projectImg"
-							src="https://opengraph.githubassets.com/be0a844bd1a76241e0a45e3271a421827e066eebea212a45883bcfa349838b2c/mi-shraban/Brain_Tumor_Detection"
-							alt="Brain Tumor Detection"
+							src="https://opengraph.githubassets.com/be0a844bd1a76241e0a45e3271a421827e066eebea212a45883bcfa349838b2c/mi-shraban/Brain_Tumor_Detector"
+							alt="Brain Tumor Detector"
 							fill
 							style={{objectFit: "cover"}}
 						/>
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detection/blob/main/Brain_Tumor_Detector_trainer.ipynb"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/Brain_Tumor_Detector_trainer.ipynb"
 						   target="_blank" rel="noopener noreferrer"><span
 							className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
 					</div>
