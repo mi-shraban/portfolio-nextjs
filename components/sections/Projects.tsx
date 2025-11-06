@@ -131,7 +131,7 @@ export default function Projects() {
 					</a>
 					<div className="thumbOverlay">
 						<a className="btn"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/Brain_Tumor_Detector_trainer.ipynb"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/"
 						   target="_blank" rel="noopener noreferrer"><span
 							className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
 					</div>
