@@ -112,8 +112,8 @@ export default function Projects() {
 							<p>
 								Built a CNN based model, trained and tested it with Brain Tumor MRI Dataset to detect
 								3 different type of brain tumor from healthy instances. Achieved nearly 96% in accuracy
-								and precision. Along with a 95.56% true positive rate. Later, built an web-app to detect
-								Brain tumors from Brain MRI Scans, using FastAPI, and the model.
+								and precision. Along with a 95.56% true positive rate. Later, built a serverless web-app
+								with the model to detect brain tumors from brain MRI scan photos using FastAPI.
 							</p>
 						</li>
 					</ul>
