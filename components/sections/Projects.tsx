@@ -100,19 +100,20 @@ export default function Projects() {
 							Github Repo
 						</a>
 						<a className="proj_link"
-						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/422_Project_SVR_RFR_LR_LSTM_CNN.ipynb"
+						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/Brain_Tumor_Detector_trainer.ipynb"
 						   target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							EDA Notebook
 						</a>
 					</h3>
 					<ul>
-						<li>Tools: <i> Python, PyTorch, NumPy, Pandas, Matplotlib</i></li>
+						<li>Tools: <i> Python, PyTorch, FastAPI, NumPy, Pandas</i></li>
 						<li>
 							<p>
 								Built a CNN based model, trained and tested it with Brain Tumor MRI Dataset to detect
 								3 different type of brain tumor from healthy instances. Achieved nearly 96% in accuracy
-								and precision. Along with a 95.56% true positive rate.
+								and precision. Along with a 95.56% true positive rate. Later, built an web-app to detect
+								Brain tumors from Brain MRI Scans, using FastAPI, and the model.
 							</p>
 						</li>
 					</ul>
@@ -122,7 +123,7 @@ export default function Projects() {
 					   target="_blank" rel="noopener noreferrer">
 						<Image
 							className="projectImg"
-							src="https://opengraph.githubassets.com/234b61c84cf236ba6d746648943f1d672b90e16697f72da8194278917dd05937/mi-shraban/Brain_Tumor_Detector"
+							src="https://repository-images.githubusercontent.com/1090791411/dc8e6867-f068-4235-9afb-f8d46db49fa6"
 							alt="Brain Tumor Detector"
 							fill
 							style={{objectFit: "cover"}}
@@ -132,7 +133,7 @@ export default function Projects() {
 						<a className="btn"
 						   href="https://github.com/mi-shraban/Brain_Tumor_Detector/blob/main/Brain_Tumor_Detector_trainer.ipynb"
 						   target="_blank" rel="noopener noreferrer"><span
-							className="link_icon">&#x1F517;&#xFE0E;</span> Exploratory Data Analysis</a>
+							className="link_icon">&#x1F517;&#xFE0E;</span> Github Repo</a>
 					</div>
 				</div>
 			</div>
