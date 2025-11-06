@@ -122,7 +122,7 @@ export default function Projects() {
 					   target="_blank" rel="noopener noreferrer">
 						<Image
 							className="projectImg"
-							src="https://opengraph.githubassets.com/be0a844bd1a76241e0a45e3271a421827e066eebea212a45883bcfa349838b2c/mi-shraban/Brain_Tumor_Detector"
+							src="https://opengraph.githubassets.com/234b61c84cf236ba6d746648943f1d672b90e16697f72da8194278917dd05937/mi-shraban/Brain_Tumor_Detector"
 							alt="Brain Tumor Detector"
 							fill
 							style={{objectFit: "cover"}}
