@@ -17,8 +17,8 @@ export default function Skills() {
 			<div className="card">
 				<h4>Web Development</h4>
 				<ul>
-					<li><b>Languages:</b> HTML, CSS, PHP, JavaScript</li>
-					<li><b>Frameworks:</b> Flask, NextJS</li>
+					<li><b>Languages:</b> HTML, CSS, JavaScript</li>
+					<li><b>Frameworks:</b> Flask, FastAPI, ReactJS, NextJS</li>
 				</ul>
 			</div>
 			<div className="card">
