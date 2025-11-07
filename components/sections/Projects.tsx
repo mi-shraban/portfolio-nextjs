@@ -100,8 +100,7 @@ export default function Projects() {
 							Github Repo
 						</a>
 						<a className="proj_link"
-						   href="https://tumor-detector-xordan.vercel.app/"
-						   target="_blank">
+						   href="https://tumor-detector-xordan.vercel.app/" target="_blank">
 							<span className="link_icon">&#x1F517;&#xFE0E;</span>
 							Live Demo
 						</a>
@@ -129,7 +128,7 @@ export default function Projects() {
 					   target="_blank" rel="noopener noreferrer">
 						<Image
 							className="projectImg"
-							src="https://repository-images.githubusercontent.com/1090791411/dc8e6867-f068-4235-9afb-f8d46db49fa6"
+							src="https://repository-images.githubusercontent.com/1090791411/ab7b8fc8-be87-4790-9ee3-db30e06bbd8d"
 							alt="Brain Tumor Detector"
 							fill
 							style={{objectFit: "cover"}}
