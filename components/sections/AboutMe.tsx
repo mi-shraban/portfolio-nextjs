@@ -117,7 +117,7 @@ export default async function AboutMe() {
                     I am a Computer Science graduate from <a href="https://bracu.ac.bd" className="ab_link" target="_blank">
                         Brac University</a>, awaiting conferral. I enjoy programming challenges,
                     and have solved <a className="ab_link" href="/cfsolves">{cfCount} problems on Codeforces</a><span> </span>
-                    and <a href="https://leetcode.com/u/xordan77/" className="ab_link" target="_blank">{lcCount} problems on LeetCode</a>.
+                    and <a href="https://github.com/mi-shraban/leetcode_solves" className="ab_link" target="_blank">{lcCount} problems on LeetCode</a>.
                     On the academic side, my research interests include data science, machine learning and deep
                     learning. I have also gained experience by working on projects which required me to study
                     about <strong>Machine Learning</strong> (<i>Scikit-Learn, TensorFlow</i>), <strong>Robotics</strong> (<i>ESP32, Arduino Uno, C++</i>) and
