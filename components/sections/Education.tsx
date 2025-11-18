@@ -8,9 +8,10 @@ export default function Education() {
                   <ul>
                       <li>2021 - 2025</li>
                       <li>CGPA: 3.48 out of 4</li>
+                      <li><b>Thesis:</b> &ldquo;<b>Avantgarde:</b> A Machine Learning Based Hybrid Host-Based Intrusion Detection and Prevention System.&rdquo;</li>
                   </ul>
               </div>
-              <div className="card">
+            <div className="card">
                   <h3><a className="ab_link" href="https://www.rajukcollege.edu.bd/" target="_blank">Rajuk Uttara Model College</a></h3>
                   <h4><b>Higher Secondary Certificate</b></h4>
                   <ul>
